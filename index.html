@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restika</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .poppins-regular {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .josefin-sans {
+            font-family: "Josefin Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .playfair-display {
+            font-family: "Playfair Display", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .content-animate {
+            opacity: 0;
+            transform: translateY(65px);
+            transition: all 0.9s ease-in-out;
+        }
+
+        .content-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="relative">
+
+        <!-- Navbar -->
+        <nav
+            class="max-w-[95%] mx-auto flex items-center justify-between josefin-sans bg-white/90 backdrop-blur-md px-2 py-2 md:px-3 md:py-5 rounded-md shadow-md absolute top-4 left-1/2 transform -translate-x-1/2 z-50 w-[90%]">
+
+            <h4 class="text-xl md:text-3xl font-bold text-[#1b2047]">RestroHub</h4>
+
+            <div class="flex gap-4 items-center hidden md:flex">
+                <ul class="flex gap-3 items-center text-lg font-semibold">
+                    <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Home</a></li>
+                    <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">About Us</a></li>
+                    <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Menu</a></li>
+                    <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Gallary</a></li>
+                    <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Contact</a></li>
+                </ul>
+
+                <button class="bg-[#fe7f32] px-4 py-2 text-white rounded">
+                    Book a table
+                </button>
+            </div>
+            <div class="md:hidden">
+                <button>
+                    <i class="hgi hgi-stroke hgi-menu-restaurant text-2xl text-[#21264c]"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Slider Wrapper -->
+        <div class="relative w-full h-screen overflow-hidden">
+            <!-- Slides Container -->
+            <div id="slider" class="w-full h-full relative">
+
+                <!-- Slide 1 -->
+                <div class="slide absolute inset-0 opacity-100 transition-opacity duration-700">
+                    <img src="./images/chicken-skewers-with-slices-sweet-peppers-dill_2829-18813.avif"
+                        class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/60"></div>
+                    <!-- Slide Content -->
+                    <div class="absolute inset-0 flex items-center justify-center text-center px-4 content-animate">
+                        <div class="flex flex-col gap-4 items-center">
+                            <span class="text-white text-md font-semibold px-3 py-1 bg-[#fe7f32] uppercase">Fresh Your
+                                Test</span>
+                            <h1 class="text-white text-6xl font-bold max-w-4xl playfair-display">Best Delicious Food
+                                Wonderful Eating
+                            </h1>
+                            <p class="text-white text-xl font-semibold josefin-sans">Lorem ipsum dolor sit amet
+                                consectetur
+                                adipisicing elit.</p>
+                            <button class="flex gap-2 items-center text-white bg-[#fe7f32] px-4 py-2 rounded">
+                                <span class="uppercase text-lg">Read More</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="slide absolute inset-0 opacity-0 transition-opacity duration-700">
+                    <img src="./images/hands-holding-shish-kebab-with-colorful-bell-peppers_141793-2931.avif"
+                        class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/60"></div>
+
+                    <div class="absolute inset-0 flex items-center justify-center text-center px-4 content-animate">
+                        <div class="flex flex-col gap-4 items-center">
+                            <span class="text-white text-md font-semibold px-3 py-1 bg-[#fe7f32] uppercase">Fresh Your
+                                Test</span>
+                            <h1 class="text-white text-6xl font-bold max-w-4xl playfair-display">Enjoy Exceptional
+                                Journey Of Taste</h1>
+                            <p class="text-white text-xl font-semibold josefin-sans">Lorem ipsum dolor sit amet
+                                consectetur
+                                adipisicing elit.</p>
+                            <button class="flex gap-2 items-center text-white bg-[#fe7f32] px-4 py-2 rounded">
+                                <span class="uppercase text-lg">Read More</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="slide absolute inset-0 opacity-0 transition-opacity duration-700">
+                    <img src="./images/people-ramadan-celebration_23-2151344679.avif"
+                        class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/60"></div>
+
+                    <div class="absolute inset-0 flex items-center justify-center text-center px-4 content-animate">
+                        <div class="flex flex-col gap-4 items-center">
+                            <span class="text-white text-md font-semibold px-3 py-1 bg-[#fe7f32] uppercase">Fresh Your
+                                Test</span>
+                            <h1 class="text-white text-6xl font-bold max-w-4xl playfair-display">Starters & Chicken
+                                Dishes Mushroom</h1>
+                            <p class="text-white text-xl font-semibold josefin-sans">Lorem ipsum dolor sit amet
+                                consectetur
+                                adipisicing elit.</p>
+                            <button class="flex gap-2 items-center text-white bg-[#fe7f32] px-4 py-2 rounded">
+                                <span class="uppercase text-lg">Read More</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Slider Controls -->
+            <button id="prev" class="absolute left-5 top-1/2 -translate-y-1/2 text-white text-4xl z-50">❮</button>
+            <button id="next" class="absolute right-5 top-1/2 -translate-y-1/2 text-white text-4xl z-50">❯</button>
+
+            <!-- Dots -->
+            <div class="absolute bottom-6 w-full flex justify-center gap-3 z-50">
+                <span class="dot w-3 h-3 bg-white rounded-full opacity-70"></span>
+                <span class="dot w-3 h-3 bg-white rounded-full opacity-30"></span>
+                <span class="dot w-3 h-3 bg-white rounded-full opacity-30"></span>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- script section -->
+    <script>
+        const slides = document.querySelectorAll(".slide");
+        const dots = document.querySelectorAll(".dot");
+        let index = 0;
+
+        function showSlide(i) {
+            slides.forEach((slide, idx) => {
+                slide.style.opacity = idx === i ? "1" : "0";
+
+                const content = slide.querySelector(".content-animate");
+
+                if (idx === i) {
+                    // Reset animation
+                    content.classList.remove("content-active");
+                    setTimeout(() => content.classList.add("content-active"), 100);
+                } else {
+                    content.classList.remove("content-active");
+                }
+            });
+
+            dots.forEach((dot, idx) => {
+                dot.style.opacity = idx === i ? "1" : "0.3";
+            });
+
+            index = i;
+        }
+
+        document.getElementById("next").onclick = () => {
+            index = (index + 1) % slides.length;
+            showSlide(index);
+        };
+
+        document.getElementById("prev").onclick = () => {
+            index = (index - 1 + slides.length) % slides.length;
+            showSlide(index);
+        };
+
+        // Auto Slide
+        setInterval(() => {
+            index = (index + 1) % slides.length;
+            showSlide(index);
+        }, 5000);
+
+        showSlide(0);
+    </script>
+    <script>
+
+
+    </script>
+</body>
+
+</html>
