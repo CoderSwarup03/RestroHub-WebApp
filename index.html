@@ -25,6 +25,7 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* font-part */
         .poppins-regular {
             font-family: "Poppins", sans-serif;
             font-weight: 400;
@@ -44,6 +45,9 @@
             font-weight: 400;
             font-style: normal;
         }
+
+
+        /* Animation part */
 
         .content-animate {
             opacity: 0;
@@ -67,10 +71,11 @@
 
             <h4 class="text-xl md:text-3xl font-bold text-[#1b2047]">RestroHub</h4>
 
+            <!-- Desktop Menu -->
             <div class="flex gap-4 items-center hidden md:flex">
                 <ul class="flex gap-3 items-center text-lg font-semibold">
                     <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Home</a></li>
-                    <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">About Us</a></li>
+                    <li><a href="./about.html" class="text-[#1b2047] hover:text-[#fe7f32]">About Us</a></li>
                     <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Menu</a></li>
                     <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Gallary</a></li>
                     <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Contact</a></li>
@@ -80,12 +85,37 @@
                     Book a table
                 </button>
             </div>
-            <div class="md:hidden">
-                <button>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden bg-white/90 backdrop-blur-md">
+                <button id="menuBtn">
                     <i class="hgi hgi-stroke hgi-menu-restaurant text-2xl text-[#21264c]"></i>
                 </button>
             </div>
         </nav>
+
+        <!-- Mobile Menu -->
+        <!-- Overlay background -->
+        <div id="overlay" class="hidden fixed inset-0 bg-black/50 z-[900]"></div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md shadow-lg z-[999] 
+           translate-y-[-100%] opacity-0 transition-all duration-300">
+
+            <!-- Close Button -->
+            <div class="flex justify-end pr-4 pt-4">
+                <i id="closeMenu" class="hgi hgi-stroke hgi-cancel-square text-3xl text-[#21264c]"></i>
+            </div>
+
+            <!-- Menu Items -->
+            <ul class="flex flex-col gap-4 px-6 py-4 text-lg font-semibold">
+                <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Home</a></li>
+                <li><a href="./about.html" class="text-[#1b2047] hover:text-[#fe7f32]">About Us</a></li>
+                <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Menu</a></li>
+                <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Gallary</a></li>
+                <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Contact</a></li>
+            </ul>
+        </div>
 
         <!-- Slider Wrapper -->
         <div class="relative w-full h-screen overflow-hidden">
@@ -100,7 +130,9 @@
                     <!-- Slide Content -->
                     <div class="absolute inset-0 flex items-center justify-center text-center px-4 content-animate">
                         <div class="flex flex-col gap-4 items-center">
-                            <span class="text-white text-md font-semibold px-3 py-1 bg-[#fe7f32] uppercase">Fresh Your
+                            <span
+                                class="text-white text-md font-semibold px-3 py-1 bg-[#fe7f32] uppercase josefin-sans">Fresh
+                                Your
                                 Test</span>
                             <h1 class="text-white text-6xl font-bold max-w-4xl playfair-display">Best Delicious Food
                                 Wonderful Eating
@@ -109,7 +141,7 @@
                                 consectetur
                                 adipisicing elit.</p>
                             <button class="flex gap-2 items-center text-white bg-[#fe7f32] px-4 py-2 rounded">
-                                <span class="uppercase text-lg">Read More</span>
+                                <span class="uppercase text-lg josefin-sans">Read More</span>
                             </button>
                         </div>
                     </div>
@@ -117,13 +149,14 @@
 
                 <!-- Slide 2 -->
                 <div class="slide absolute inset-0 opacity-0 transition-opacity duration-700">
-                    <img src="./images/hands-holding-shish-kebab-with-colorful-bell-peppers_141793-2931.avif"
-                        class="w-full h-full object-cover">
+                    <img src="./images/life-style_1122-1996.avif" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-black/60"></div>
 
                     <div class="absolute inset-0 flex items-center justify-center text-center px-4 content-animate">
                         <div class="flex flex-col gap-4 items-center">
-                            <span class="text-white text-md font-semibold px-3 py-1 bg-[#fe7f32] uppercase">Fresh Your
+                            <span
+                                class="text-white text-md font-semibold px-3 py-1 bg-[#fe7f32] uppercase josefin-sans">Fresh
+                                Your
                                 Test</span>
                             <h1 class="text-white text-6xl font-bold max-w-4xl playfair-display">Enjoy Exceptional
                                 Journey Of Taste</h1>
@@ -131,7 +164,7 @@
                                 consectetur
                                 adipisicing elit.</p>
                             <button class="flex gap-2 items-center text-white bg-[#fe7f32] px-4 py-2 rounded">
-                                <span class="uppercase text-lg">Read More</span>
+                                <span class="uppercase text-lg josefin-sans">Read More</span>
                             </button>
                         </div>
                     </div>
@@ -145,7 +178,9 @@
 
                     <div class="absolute inset-0 flex items-center justify-center text-center px-4 content-animate">
                         <div class="flex flex-col gap-4 items-center">
-                            <span class="text-white text-md font-semibold px-3 py-1 bg-[#fe7f32] uppercase">Fresh Your
+                            <span
+                                class="text-white text-md font-semibold px-3 py-1 bg-[#fe7f32] uppercase josefin-sans">Fresh
+                                Your
                                 Test</span>
                             <h1 class="text-white text-6xl font-bold max-w-4xl playfair-display">Starters & Chicken
                                 Dishes Mushroom</h1>
@@ -153,7 +188,7 @@
                                 consectetur
                                 adipisicing elit.</p>
                             <button class="flex gap-2 items-center text-white bg-[#fe7f32] px-4 py-2 rounded">
-                                <span class="uppercase text-lg">Read More</span>
+                                <span class="uppercase text-lg josefin-sans">Read More</span>
                             </button>
                         </div>
                     </div>
@@ -173,6 +208,11 @@
             </div>
         </div>
     </header>
+
+    <!-- about us -->
+    <section>
+       
+    </section>
 
 
 
@@ -221,11 +261,42 @@
         }, 5000);
 
         showSlide(0);
-    </script>
-    <script>
 
 
+
+        // navbarMenu
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const closeMenu = document.getElementById("closeMenu");
+        const overlay = document.getElementById("overlay");
+
+        // OPEN MENU
+        menuBtn.addEventListener("click", () => {
+            overlay.classList.remove("hidden");
+
+            mobileMenu.classList.remove("hidden");
+            setTimeout(() => {
+                mobileMenu.classList.remove("translate-y-[-100%]", "opacity-0");
+                mobileMenu.classList.add("translate-y-0", "opacity-100");
+            }, 10);
+        });
+
+        // CLOSE MENU
+        function closeMobileMenu() {
+            mobileMenu.classList.add("translate-y-[-100%]", "opacity-0");
+            mobileMenu.classList.remove("translate-y-0", "opacity-100");
+
+            overlay.classList.add("hidden");
+
+            setTimeout(() => {
+                mobileMenu.classList.add("hidden");
+            }, 300);
+        }
+
+        closeMenu.addEventListener("click", closeMobileMenu);
+        overlay.addEventListener("click", closeMobileMenu);
     </script>
+
 </body>
 
 </html>

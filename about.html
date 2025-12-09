@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restika</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* font-part */
+        .poppins-regular {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .josefin-sans {
+            font-family: "Josefin Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .playfair-display {
+            font-family: "Playfair Display", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="about_us" class="">
+        <div class="relative">
+
+            <!-- Background Image -->
+            <img src="./images/top-view-food-frame-with-copy-space_23-2148723447.avif"
+                class="w-full h-[500px] object-cover" alt="about us">
+
+            <!-- 🔥 Black Shade Overlay -->
+            <div class="absolute inset-0 bg-black/60"></div>
+
+            <!-- Navbar -->
+            <nav
+                class="max-w-[95%] mx-auto flex items-center justify-between josefin-sans bg-white/90 backdrop-blur-md px-2 py-2 md:px-3 md:py-5 rounded-md shadow-md absolute top-4 left-1/2 transform -translate-x-1/2 z-50 w-[90%]">
+
+                <h4 class="text-xl md:text-3xl font-bold text-[#1b2047]">RestroHub</h4>
+
+                <!-- Desktop Menu -->
+                <div class="flex gap-4 items-center hidden md:flex">
+                    <ul class="flex gap-3 items-center text-lg font-semibold">
+                        <li><a href="./index.html" class="text-[#1b2047] hover:text-[#fe7f32]">Home</a></li>
+                        <li><a href="./about.html" class="text-[#1b2047] hover:text-[#fe7f32]">About Us</a></li>
+                        <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Menu</a></li>
+                        <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Gallary</a></li>
+                        <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Contact</a></li>
+                    </ul>
+
+                    <button class="bg-[#fe7f32] px-4 py-2 text-white rounded">
+                        Book a table
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden backdrop-blur-md">
+                    <button id="menuBtn">
+                        <i class="hgi hgi-stroke hgi-menu-restaurant text-2xl text-[#21264c]"></i>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Mobile Menu -->
+            <div id="overlay" class="hidden fixed inset-0 bg-black/50 z-[900]"></div>
+
+            <div id="mobileMenu" class="hidden md:hidden fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md shadow-lg z-[999] 
+           translate-y-[-100%] opacity-0 transition-all duration-300">
+
+                <div class="flex justify-end pr-4 pt-4">
+                    <i id="closeMenu" class="hgi hgi-stroke hgi-cancel-square text-3xl text-[#21264c]"></i>
+                </div>
+
+                <ul class="flex flex-col gap-4 px-6 py-4 text-lg font-semibold">
+                    <li><a href="./index.html" class="text-[#1b2047] hover:text-[#fe7f32]">Home</a></li>
+                    <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">About Us</a></li>
+                    <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Menu</a></li>
+                    <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Gallary</a></li>
+                    <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Text Content -->
+            <div class="absolute top-[20%] md:top-[28%] left-[15%] md:left-[25%] flex flex-col gap-5 items-start z-20">
+                <span class="text-sm uppercase md:text-xl font-bold josefin-sans text-white">
+                    About Us
+                </span>
+                <h2 class="playfair-display text-[#e5ebef] text-2xl md:text-6xl font-bold w-full">
+                    Story of our restaurant
+                </h2>
+                <span class="josefin-sans text-white">
+                    Quaerat debitis, vel, sapiente dicta sequi
+                    labore porro pariatur harum expedita.
+                </span>
+            </div>
+        </div>
+
+        <!-- about info section👇👇 -->
+
+        <div class="relative">
+
+            <!-- Background Image -->
+            <img src="./images/background/top-view-baked-potatoes-with-cooked-vegetables-dark-desk_140725-79584.jpg"
+                class="w-full absolute inset-0 object-cover h-[120vh]" alt="">
+
+            <!-- Black Shade ON Image -->
+            <div class="absolute inset-0 bg-black/60"></div>
+
+            <!-- Content -->
+            <div class="max-w-[90%] mx-auto bg-[#fcfcfc] relative z-10 border-2 border-green-500 p-6 h-[120vh] py-2 rounded-md">
+                <div class="flex items-center justify-center mt-4">
+                    <span class="text-xl font-bold uppercase">About us</span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- script section -->
+    <script>
+        // navbarMenu
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const closeMenu = document.getElementById("closeMenu");
+        const overlay = document.getElementById("overlay");
+
+        // OPEN MENU
+        menuBtn.addEventListener("click", () => {
+            overlay.classList.remove("hidden");
+
+            mobileMenu.classList.remove("hidden");
+            setTimeout(() => {
+                mobileMenu.classList.remove("translate-y-[-100%]", "opacity-0");
+                mobileMenu.classList.add("translate-y-0", "opacity-100");
+            }, 10);
+        });
+
+        // CLOSE MENU
+        function closeMobileMenu() {
+            mobileMenu.classList.add("translate-y-[-100%]", "opacity-0");
+            mobileMenu.classList.remove("translate-y-0", "opacity-100");
+
+            overlay.classList.add("hidden");
+
+            setTimeout(() => {
+                mobileMenu.classList.add("hidden");
+            }, 300);
+        }
+
+        closeMenu.addEventListener("click", closeMobileMenu);
+        overlay.addEventListener("click", closeMobileMenu);
+    </script>
+</body>
+
+</html>
