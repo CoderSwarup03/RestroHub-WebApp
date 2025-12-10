@@ -22,6 +22,9 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -210,99 +213,135 @@
     </header>
 
     <!-- about us -->
-    <section id="#about">
-        <div class="relative">
-            <!-- Background Image -->
+    <section id="about" class="relative">
+        <!-- Background Image -->
+        <div class="absolute inset-0">
             <img src="./images/background/top-view-baked-potatoes-with-cooked-vegetables-dark-desk_140725-79584.jpg"
-                class="w-full absolute inset-0 object-cover h-[200vh] md:h-[60rem]" alt="">
-
-            <!-- Black Shade ON Image -->
+                class="w-full h-full object-cover" alt="">
             <div class="absolute inset-0 bg-black/60"></div>
+        </div>
 
-            <!-- Content -->
-            <div
-                class="max-w-[90%] mx-auto bg-[#fcfcfc] relative z-10 border-2 border-green-500 p-6 h-[200vh] md:h-[60rem] py-2 rounded-md flex flex-col gap-5">
+        <!-- Content box -->
+        <div class="relative z-10 max-w-[90%] mx-auto py-12 md:py-20">
+            <div class="bg-[#fcfcfc] border border-green-500 rounded-md p-6 md:p-10 flex flex-col gap-10">
 
-                <!-- about us -->
-                <div class="flex flex-col md:flex-row justify-between gap-4 w-[100%]">
-                    <div class="w-full md:w-[48%]">
+                <!-- About Section -->
+                <div class="flex flex-col md:flex-row justify-between gap-6">
+                    <div class="w-full md:w-1/2">
                         <img src="./images/about/happy-waiter-serving-food-group-cheerful-friends-pub_637285-12525.avif"
                             class="rounded-md" alt="">
                     </div>
-                    <div class="flex flex-col gap-3 w-full md:w-[48%] justify-center">
+
+                    <div class="w-full md:w-1/2 flex flex-col gap-4 justify-center">
                         <span class="josefin-sans uppercase">About Us</span>
-                        <h4 class="playfair-display text-2xl md:text-5xl font-bold">We invite you to
-                            visit our restaurant</h4>
-                        <p class="josefin-sans text-[#a0a7aa]">Assumenda possimus eaque illo iste, autem. Porro eveniet,
-                            autem ipsam vitae amet repellat
-                            repudiandae tenetur, quod corrupti consectetur cum? Repudiandae dignissimos fugiat sit nam.
-                            Tempore aspernatur quae repudiandae dolorem, beatae dolorum, praesentium itaque et quam
-                            quaerat. Cumque, consequatur!</p>
+
+                        <h4 class="playfair-display text-2xl md:text-5xl font-bold">
+                            We invite you to visit our restaurant
+                        </h4>
+
+                        <p class="josefin-sans text-[#a0a7aa]">
+                            Assumenda possimus eaque illo iste, autem. Porro eveniet...
+                        </p>
 
                         <div class="flex flex-col md:flex-row items-center gap-4">
-                            <div>
-                                <button class="bg-[#f39c12] px-2 md:px-3 py-2 md:py-3 rounded-md josefin-sans uppercase text-sm"><a
-                                        href="#">Read
-                                        More</a></button>
-                            </div>
-                            <div class="flex items-center gap-3 text-md md:text-xl cursor-pointer">
-                                <a href="#">
-                                    <i class="hgi hgi-stroke hgi-facebook-02 hover:text-[#f39c12]"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="hgi hgi-stroke hgi-instagram hover:text-[#f39c12] cursor-pointer"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="hgi hgi-stroke hgi-new-twitter hover:text-[#f39c12] cursor-pointer"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="hgi hgi-stroke hgi-youtube hover:text-[#f39c12] cursor-pointer"></i>
-                                </a>
+                            <a href="./about.html">
+                                <button class="bg-[#f39c12] px-4 py-3 rounded-md text-white uppercase josefin-sans">
+                                    Read More
+                                </button>
+                            </a>
+
+                            <div class="flex items-center gap-3 text-xl">
+                                <i class="hgi hgi-stroke hgi-facebook-02 hover:text-[#f39c12] cursor-pointer"></i>
+                                <i class="hgi hgi-stroke hgi-instagram hover:text-[#f39c12] cursor-pointer"></i>
+                                <i class="hgi hgi-stroke hgi-new-twitter hover:text-[#f39c12] cursor-pointer"></i>
+                                <i class="hgi hgi-stroke hgi-youtube hover:text-[#f39c12] cursor-pointer"></i>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="border-b-4 border-dotted border-[#c5cacc] mt-4">
+                <div class="border-b-4 border-dotted border-[#c5cacc]"></div>
 
-                </div>
-
-                <!-- html feature section -->
-                <div class="flex flex-col gap-4 items-center justify-center mt-4 text-center">
-                    <div class="w-full md:w-[35vw] flex flex-col gap-5">
-                        <span class="text-sm md:text-xl font-bold uppercase ">Features</span>
-                        <h4 class="playfair-display text-2xl md:text-5xl font-extrabold text-center">Why people choose
-                            us?</h4>
-                        <span class="text-[#b9bfc0] josefin-sans text-sm md:text-xl">Porro eveniet, autem ipsam vitae
-                            consequatur!</span>
-                    </div>
+                <!-- Features Section -->
+                <div class="text-center flex flex-col items-center gap-3">
+                    <span class="text-xl font-bold uppercase">Features</span>
+                    <h4 class="playfair-display text-3xl md:text-5xl font-extrabold">Why people choose us?</h4>
+                    <span class="text-[#b9bfc0] josefin-sans">Porro eveniet, autem ipsam!</span>
                 </div>
 
                 <!-- Services -->
-                <div class="flex flex-col md:flex-row justify-between items-center gap-4 mt-5">
-                    <div class="border-2 border-[#c5cacc] rounded-md flex flex-col gap-3 items-center p-3">
-                        <img src="./images/about/icon-serv-1-256x256.png" class="h-[65px] w-[65px]" alt="">
-                        <h4 class="text-lg md:text-2xl font-bold josefin-sans">Menu for every taste</h4>
-                        <span class="josefin-sans text-sm md:text-xl text-[#c5cacc]">Dolor sit amet, consectetur
-                            adipisicing elit et
-                            molestias possimus</span>
+                <div class="flex flex-col md:flex-row justify-between items-center gap-3 mt-8 ">
+                    <div class="border-2 border-[#c5cacc] rounded-md flex flex-col gap-3 items-center p-4 ">
+                        <img src="./images/about/icon-serv-1-256x256.png" class="h-[45px] md:h-[65px]" alt="">
+                        <h4 class="text-lg md:text-3xl font-bold playfair-display">Menu for every taste</h4>
+                        <span class="text-[#c5cacc] josefin-sans">Dolor sit amet, consectetur adipisicing elit et
+                            molestias
+                            possimus</span>
                     </div>
-                    <div class="border-2 border-[#c5cacc] rounded-md flex flex-col gap-3 items-center p-3">
-                        <img src="./images/about/icon-serv-2-256x256.png" class="h-[65px] w-[65px]" alt="">
-                        <h4 class="text-lg md:text-2xl font-bold josefin-sans">Always fresh ingredients</h4>
-                        <span class="josefin-sans text-sm md:text-xl text-[#c5cacc]">Assumenda possimus eaque illo iste,
-                            autem. Porro eveniet autem</span>
+
+                    <div class="border-2 border-[#c5cacc] rounded-md flex flex-col gap-3 items-center p-4">
+                        <img src="./images/about/icon-serv-2-256x256.png" class="h-[45px] md:h-[65px]" alt="">
+                        <h4 class="text-lg md:text-3xl font-bold playfair-display">Always fresh ingredients</h4>
+                        <span class="text-[#c5cacc] josefin-sans">Assumenda possimus eaque illo iste, autem. Porro
+                            eveniet
+                            autem</span>
                     </div>
-                    <div class="border-2 border-[#c5cacc] rounded-md flex flex-col gap-3 items-center p-3">
-                        <img src="./images/about/icon-serv-3-256x256.png" class="h-[65px] w-[65px]" alt="">
-                        <h4 class="text-lg md:text-2xl font-bold josefin-sans">Experienced chefs</h4>
-                        <span class="josefin-sans text-sm md:text-xl text-[#c5cacc]">Rolorem, beatae dolorum,
-                            praesentium itaque et quam quaerat</span>
+
+                    <div class="border-2 border-[#c5cacc] rounded-md flex flex-col gap-3 items-center p-4">
+                        <img src="./images/about/icon-serv-3-256x256.png" class="h-[45px] md:h-[65px]" alt="">
+                        <h4 class="text-lg md:text-3xl font-bold playfair-display">Experienced chefs</h4>
+                        <span class="text-[#c5cacc] josefin-sans">Rolorem, beatae dolorum, praesentium itaque et quam
+                            quaerat</span>
                     </div>
                 </div>
+
+                <div class="border-b-4 border-dotted border-[#c5cacc]"></div>
+
+                <!-- Our Services -->
+                <div class="text-center mt-4 flex flex-col gap-2">
+                    <span class="text-xl font-bold uppercase">Our Services</span>
+                    <h4 class="playfair-display text-3xl md:text-5xl font-extrabold">Why We are the best</h4>
+
+                    <div class="flex flex-col md:flex-row justify-between gap-4 items-center mt-5">
+                        <div class="border-2 border-[#daddde] p-4 flex flex-col gap-3 items-center md:items-start">
+                            <img src="./images/serviceImg/delicious-pizza-indoors_23-2150873874.avif" class="rounded-md" alt="">
+                            <h4 class="text-lg md:text-3xl font-bold playfair-display">Prickly Pear Tonic</h4>
+                            <p class="text-[#c5cacc] josefin-sans">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum dummy text</p>
+                            <button class="bg-[#f39c12] px-3 py-2 rounded-md text-white uppercase josefin-sans">
+                                <a href="#">Read More</a>
+                            </button>
+                        </div>
+                        <div class="border-2 border-[#daddde] p-4 flex flex-col gap-3 items-center md:items-start">
+                            <img src="./images/serviceImg/crispy-chicken-burger_23-2151950828.avif" class="rounded-md" alt="">
+                            <h4 class="text-lg md:text-3xl font-bold playfair-display">Prickly Pear Tonic</h4>
+                            <p class="text-[#c5cacc] josefin-sans">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum dummy text</p>
+                            <button class="bg-[#f39c12] px-3 py-2 rounded-md text-white uppercase josefin-sans">
+                                <a href="#">Read More</a>
+                            </button>
+                        </div>
+                        <div class="border-2 border-[#daddde] p-4 flex flex-col gap-3 items-center md:items-start">
+                            <img src="./images/serviceImg/steaming-cup-chai-tea-with-star-anise-cinnamon-sticks-cloves-black-surface_9975-124486.avif" class="rounded-md" alt="">
+                            <h4 class="text-lg md:text-3xl font-bold playfair-display">Prickly Pear Tonic</h4>
+                            <p class="text-[#c5cacc] josefin-sans">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum dummy text</p>
+                            <button class="bg-[#f39c12] px-3 py-2 rounded-md text-white uppercase josefin-sans">
+                                <a href="#">Read More</a>
+                            </button>
+                        </div>
+
+                        
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
+
+
+    <!-- our services -->
+
 
     <!-- script section -->
     <script>
