@@ -4,10 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restika</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,6 +22,12 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -49,16 +51,29 @@
             font-weight: 400;
             font-style: normal;
         }
+
+
+        /* Animation part */
+
+        .content-animate {
+            opacity: 0;
+            transform: translateY(65px);
+            transition: all 0.9s ease-in-out;
+        }
+
+        .content-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 
 <body>
-    <section id="about_us" class="">
+    <section>
         <div class="relative">
-
             <!-- Background Image -->
-            <img src="./images/top-view-food-frame-with-copy-space_23-2148723447.avif"
-                class="w-full h-[500px] object-cover" alt="about us">
+            <img src="./images/order/people-taking-photos-food_23-2149303524.avif" class="w-full h-[500px] object-cover"
+                alt="about us">
 
             <!-- 🔥 Black Shade Overlay -->
             <div class="absolute inset-0 bg-black/60"></div>
@@ -80,7 +95,7 @@
                     </ul>
 
                     <button class="bg-[#fe7f32] px-4 py-2 text-white rounded">
-                        <a href="./booktable.html">Book a table</a>
+                        Book a table
                     </button>
                 </div>
 
@@ -114,7 +129,7 @@
 
                 <!-- Fixed Book Button -->
                 <div class="px-6 pb-6">
-                    <a href="./booktable.html" class="block text-center bg-[#fe7f32] px-4 py-3 text-white rounded-lg font-semibold">
+                    <a href="#" class="block text-center bg-[#fe7f32] px-4 py-3 text-white rounded-lg font-semibold">
                         Book a Table
                     </a>
                 </div>
@@ -123,109 +138,148 @@
             <!-- Text Content -->
             <div class="absolute top-[20%] md:top-[28%] left-[15%] md:left-[25%] flex flex-col gap-5 items-start z-20">
                 <span class="text-sm uppercase md:text-xl font-bold josefin-sans text-white">
-                    About Us
+                    Your table
                 </span>
                 <h2 class="playfair-display text-[#e5ebef] text-2xl md:text-6xl font-bold w-full">
-                    Story of our restaurant
+                    Reservation
                 </h2>
-                <span class="josefin-sans text-white">
+                <span class="josefin-sans text-white w-full md:w-[22vw]">
                     Quaerat debitis, vel, sapiente dicta sequi
                     labore porro pariatur harum expedita.
                 </span>
             </div>
         </div>
+    </section>
 
-        <!-- about info section👇👇 -->
+    <!-- Reservation Section -->
 
-        <div class="relative">
-
-            <!-- Background Image -->
+    <section id="about" class="relative">
+        <!-- Background Image -->
+        <div class="absolute inset-0">
             <img src="./images/background/top-view-baked-potatoes-with-cooked-vegetables-dark-desk_140725-79584.jpg"
-                class="w-full absolute inset-0 object-coverw-full h-full object-cover" alt="">
-
-            <!-- Black Shade ON Image -->
+                class="w-full h-full object-cover" alt="">
             <div class="absolute inset-0 bg-black/60"></div>
+        </div>
 
-            <!-- Content -->
-            <div
-                class="max-w-[90%] mx-auto bg-[#fcfcfc] relative z-10 p-6 py-2 rounded-md flex flex-col gap-5">
-                <div class="flex flex-col gap-4 items-center justify-center mt-4 text-center">
-                    <div class="w-full md:w-[35vw] flex flex-col gap-5">
-                        <span class="text-sm md:text-xl font-bold uppercase ">About us</span>
-                        <h4 class="playfair-display text-2xl md:text-5xl font-extrabold text-center">Why people choose
-                            us?</h4>
-                        <span class="text-[#b9bfc0] josefin-sans text-sm md:text-xl">Porro eveniet, autem ipsam vitae
-                            consequatur!</span>
-                    </div>
+        <!-- Content box -->
+        <div class="relative z-10 max-w-[90%] mx-auto py-12 md:py-20">
+            <div class="bg-[#fcfcfc] border border-green-500 rounded-md p-6 md:p-10 flex flex-col gap-10">
+
+                <!-- Resarvation Section -->
+                <div class="text-center flex flex-col items-center gap-3">
+                    <span class="text-xl font-bold uppercase">Reservation</span>
+                    <h4 class="playfair-display text-3xl md:text-5xl font-extrabold">Book a table</h4>
+                    <span class="text-[#b9bfc0] josefin-sans">CALL US +1 777 000 111 OR COMPLETE THE FORM BELOW</span>
                 </div>
 
-                <!-- Services -->
-                <div class="flex flex-col md:flex-row justify-between items-center gap-4 mt-5">
-                    <div class="border-2 border-[#c5cacc] rounded-md flex flex-col gap-3 items-center p-3">
-                        <img src="./images/about/icon-serv-1-256x256.png" class="h-[65px] w-[65px]" alt="">
-                        <h4 class="text-lg md:text-2xl font-bold josefin-sans">Menu for every taste</h4>
-                        <span class="josefin-sans text-sm md:text-xl text-[#c5cacc]">Dolor sit amet, consectetur
-                            adipisicing elit et
-                            molestias possimus</span>
-                    </div>
-                    <div class="border-2 border-[#c5cacc] rounded-md flex flex-col gap-3 items-center p-3">
-                        <img src="./images/about/icon-serv-2-256x256.png" class="h-[65px] w-[65px]" alt="">
-                        <h4 class="text-lg md:text-2xl font-bold josefin-sans">Always fresh ingredients</h4>
-                        <span class="josefin-sans text-sm md:text-xl text-[#c5cacc]">Assumenda possimus eaque illo iste,
-                            autem. Porro eveniet autem</span>
-                    </div>
-                    <div class="border-2 border-[#c5cacc] rounded-md flex flex-col gap-3 items-center p-3">
-                        <img src="./images/about/icon-serv-3-256x256.png" class="h-[65px] w-[65px]" alt="">
-                        <h4 class="text-lg md:text-2xl font-bold josefin-sans">Experienced chefs</h4>
-                        <span class="josefin-sans text-sm md:text-xl text-[#c5cacc]">Rolorem, beatae dolorum,
-                            praesentium itaque et quam quaerat</span>
-                    </div>
-                </div>
-
-                <!-- border -->
-                <div class="border-b-4 border-dotted border-[#c5cacc] mt-4">
-
-                </div>
-
-                <div class="relative mx-auto rounded-md overflow-hidden h-[500px] md:h-[50vh]">
-                    <!-- Image -->
-                    <img src="./images/about/asian-food-chinese-noodles-with-vegetables-shrimp-old-rustic-background_220925-10831.avif"
-                        class="w-full h-full md:h-screen object-cover" alt="">
-
-                    <!-- Black Shade -->
-                    <div class="absolute inset-0 bg-black/60"></div>
-
-                    <!-- Text ON TOP of Image -->
-                    <div
-                        class="absolute bottom-5 left-5 right-2 text-white flex flex-col md:flex-row items-center justify-between gap-4">
-                        <div class="flex flex-col gap-2">
-                            <h4 class="text-2xl md:text-4xl md:text-5xl playfair-display font-bold">Working hours</h4>
-                            <span class="text-md md:text-lg">Rolorem, beatae dolorum, praesentium itaque et quam
-                                quaerat.</span>
-                            <div class="flex flex-col md:flex-row gap-5">
+                <div>
+                    <form>
+                        <div class="flex flex-col gap-3">
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                <input type="text" placeholder="Name"
+                                    class="border-2 border-[#daddde] p-4 rounded-md josefin-sans font-semibold text-[#24383c] shadow-md outline-none">
+                                <input type="email" placeholder="Email"
+                                    class="border-2 border-[#daddde] p-4 rounded-md josefin-sans font-semibold text-[#24383c] shadow-md outline-none">
+                                <input type="phone" placeholder="Phone"
+                                    class="border-2 border-[#daddde] p-4 rounded-md josefin-sans font-semibold text-[#24383c] shadow-md outline-none">
+                                <input type="text" placeholder="Person"
+                                    class="border-2 border-[#daddde] p-4 rounded-md josefin-sans font-semibold text-[#24383c] shadow-md outline-none">
+                                <input type="date" placeholder="Phone"
+                                    class="border-2 border-[#daddde] p-4 rounded-md josefin-sans font-semibold text-[#24383c] shadow-md outline-none">
+                                <input type="time" placeholder="Phone"
+                                    class="border-2 border-[#daddde] p-4 rounded-md josefin-sans font-semibold text-[#24383c] shadow-md outline-none">
+                            </div>
+                            <div>
+                                <textarea placeholder="Message"
+                                    class="border-2 border-[#daddde] p-4 rounded-md josefin-sans font-semibold text-[#24383c] w-full shadow-md outline-none"></textarea>
+                            </div>
+                            <div class="flex justify-center items-center">
                                 <button
-                                    class="bg-[#f39c12] px-5 py-3 rounded-md cursor-pointer text-black uppercase josefin-sans">
-                                    <a href="#">Book a table</a>
-                                </button>
-                                <button class="uppercase josefin-sans">
-                                    <a href="">Contact Us</a>
-                                </button>
+                                    class="text-sm md:text-md font-semibold uppercase josefin-sans px-2 md:px-3 py-2 md:py-3 rounded-md bg-[#f39c12]">reserved
+                                    a table</button>
                             </div>
                         </div>
-                        <div class="bg-[#ffffff] px-5 py-3 rounded-md w-full md:w-[20vw]">
-                            <div class="flex flex-col gap-3 items-center text-center text-black">
-                                <span class="josefin-sans text-md font-bold uppercase">Sunday to Tuesday</span>
-                                <span class="playfair-display text-xl font-bold">10:00 - 22:00</span>
-                                <span class="josefin-sans text-md font-bold uppercase">Wednesday to Saturday</span>
-                                <span class="playfair-display text-xl font-bold">10:00 - 23:00</span>
-                            </div>
-                        </div>
+                    </form>
+                </div>
 
+                <div class="border-b-4 border-dotted border-[#c5cacc]"></div>
+
+
+                <!-- contact -->
+                <div class="text-center flex flex-col items-center gap-4">
+                    <span class="text-xl font-bold uppercase">Have any question?</span>
+                    <h4 class="playfair-display text-3xl md:text-5xl font-extrabold">Contact Us</h4>
+                    <span class="text-[#b9bfc0] josefin-sans">Quaerat debitis, vel, sapiente dicta sequi labore porro
+                        pariatur harum expedita.</span>
+                </div>
+
+                <!-- contact more info -->
+                <div class="flex flex-col md:flex-row justify-between items-center gap-3 mt-8 w-full">
+                    <div
+                        class="border-2 border-[#c5cacc] rounded-md flex flex-col gap-3 items-center p-4 w-full md:w-[25%] h-auto overflow-hidden">
+                        <img src="./images/order/icon-contact-email-256x256.png" class="h-[45px] md:h-[65px]"
+                            alt="email">
+                        <h4 class="text-lg md:text-3xl font-bold playfair-display">Email</h4>
+                        <div class="flex flex-col gap-2">
+                            <span class="text-[#c5cacc] josefin-sans">info@example.com</span>
+                            <span class="text-[#c5cacc] josefin-sans">reservation@restrohub.com</span>
+                        </div>
                     </div>
+
+
+                    <div
+                        class="border-2 border-[#c5cacc] rounded-md flex flex-col gap-3 items-center p-4 w-full md:w-[25%] h-[28vh] md:h-[35vh]">
+                        <img src="./images/order/icon-contact-tel-256x256.png" class="h-[45px] md:h-[65px]"
+                            alt="contact">
+                        <h4 class="text-lg md:text-3xl font-bold playfair-display">Phone</h4>
+                        <div class="flex flex-col gap-2">
+                            <span class="text-[#c5cacc] josefin-sans">+1 777 000 111</span>
+                            <span class="text-[#c5cacc] josefin-sans">+91 888 000 111</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="border-2 border-[#c5cacc] rounded-md flex flex-col gap-3 items-center p-4 w-full md:w-[25%] h-[28vh] md:h-[35vh]">
+                        <img src="./images/order/icon-contact-adr-256x256.png" class="h-[45px] md:h-[65px]"
+                            alt="location">
+                        <h4 class="text-lg md:text-3xl font-bold playfair-display">Location</h4>
+                        <span class="text-[#c5cacc] josefin-sans">Kolkata, India - 700000</span>
+                    </div>
+                </div>
+
+
+                <div class="border-b-4 border-dotted border-[#c5cacc]"></div>
+
+                <!-- news latter -->
+                <div class="relative w-full  mx-auto">
+
+                    <!-- IMAGE -->
+                    <img src="./images/newslatter/food-frame-with-copy-space-flat-lay_23-2148723504.avif"
+                        class="w-full h-[50vh] md:h-[450px] object-cover rounded-md" alt="newsletter">
+
+                    <!-- BLACK SHADE -->
+                    <div class="absolute inset-0 bg-black/60 rounded-md"></div>
+
+                    <!-- TEXT ON TOP -->
+                    <div
+                        class="absolute inset-0 flex flex-col justify-center items-center text-center px-4 flex flex-col gap-3">
+                        <h4 class="text-2xl md:text-3xl font-bold josefin-sans text-white">
+                            Subscribe our newsletter
+                        </h4>
+                        <p class="text-lg josefin-sans text-gray-200 mt-2">
+                            Lorem ipsum dolor sit amet consectetur
+                        </p>
+                        <div class="flex flex-col md:flex-row items-center gap-3">
+                            <input placeholder="Email" class="outline-none px-5 py-3 rounded-md josefin-sans"
+                                type="email">
+                            <button
+                                class="bg-[#f39c12] px-3 py-3 rounded-md inline-block josefin-sans uppercase">Subscribe</button>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
-
         </div>
     </section>
     <footer class="relative w-full">
@@ -293,8 +347,6 @@
                         <span class="text-[#798587]">
                             <a href="#">Contact</a>
                         </span>
-
-
                     </div>
                 </div>
             </div>
@@ -310,10 +362,7 @@
 
     </footer>
 
-
-    <!-- script section -->
     <script>
-        // navbarMenu
         const menuBtn = document.getElementById("menuBtn");
         const mobileMenu = document.getElementById("mobileMenu");
         const closeMenu = document.getElementById("closeMenu");
@@ -343,7 +392,7 @@
         }
 
         closeMenu.addEventListener("click", closeMobileMenu);
-        overlay.addEventListener("click", closeMobileMenu);
+        overlay.addEventListener("click", closeMobileMenu)
     </script>
 </body>
 

@@ -74,9 +74,7 @@
         <!-- Navbar -->
         <nav
             class="max-w-[95%] mx-auto flex items-center justify-between josefin-sans bg-white/90 backdrop-blur-md px-2 py-2 md:px-3 md:py-5 rounded-md shadow-md absolute top-4 left-1/2 transform -translate-x-1/2 z-50 w-[90%]">
-
             <h4 class="text-xl md:text-3xl font-bold text-[#1b2047]">RestroHub</h4>
-
             <!-- Desktop Menu -->
             <div class="flex gap-4 items-center hidden md:flex">
                 <ul class="flex gap-3 items-center text-lg font-semibold">
@@ -88,7 +86,7 @@
                 </ul>
 
                 <button class="bg-[#fe7f32] px-4 py-2 text-white rounded">
-                    Book a table
+                    <a href="./booktable.html">Book a table</a>
                 </button>
             </div>
 
@@ -118,16 +116,22 @@
                 <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Home</a></li>
                 <li><a href="./about.html" class="text-[#1b2047] hover:text-[#fe7f32]">About Us</a></li>
                 <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Menu</a></li>
-                <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Gallary</a></li>
+                <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Gallery</a></li>
                 <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Contact</a></li>
             </ul>
+
+            <!-- Fixed Book Button -->
+            <div class="px-6 pb-6">
+                <a href="./booktable.html" class="block text-center bg-[#fe7f32] px-4 py-3 text-white rounded-lg font-semibold">
+                    Book a Table
+                </a>
+            </div>
         </div>
 
         <!-- Slider Wrapper -->
         <div class="relative w-full h-screen overflow-hidden">
             <!-- Slides Container -->
             <div id="slider" class="w-full h-full relative">
-
                 <!-- Slide 1 -->
                 <div class="slide absolute inset-0 opacity-100 transition-opacity duration-700">
                     <img src="./images/chicken-skewers-with-slices-sweet-peppers-dill_2829-18813.avif"
@@ -498,14 +502,14 @@
 
 
             <div class="flex flex-col md:flex-row justify-between items-center w-full mt-3 gap-3">
-                <div class=" w-full md:w-[25%] flex flex-col items-start">
+                <div class=" w-full md:w-[25%] flex flex-col items-start gap-3">
                     <h4 class="text-lg md:text-2xl playfair-display text-[#f2f6f7] font-bold">About us</h4>
                     <span class="text-[#798587] josefin-sans">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                         Laborum
                         beatae minima id, repellat
                         delectus distinctio reprehenderit quibusdam dolores quos cupiditate?</span>
                 </div>
-                <div class="w-full md:w-[25%] flex flex-col items-start">
+                <div class="w-full md:w-[25%] flex flex-col items-start gap-3">
                     <h4 class="text-lg md:text-2xl playfair-display text-[#f2f6f7] font-bold">Contact Info</h4>
                     <div class="flex justify-between items-center w-full">
                         <div class="flex flex-col gap-2 items-start text-[#b9c1c3] uppercase josefin-sans">
@@ -520,7 +524,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-full md:w-[25%] flex flex-col items-start">
+                <div class="w-full md:w-[25%] flex flex-col items-start gap-3">
                     <h4 class="text-lg md:text-2xl playfair-display text-[#f2f6f7] font-bold">Quick Links</h4>
                     <div class="flex flex-col gap-1 josefin-sans">
                         <span class="text-[#798587]">
@@ -535,8 +539,6 @@
                         <span class="text-[#798587]">
                             <a href="#">Contact</a>
                         </span>
-
-
                     </div>
                 </div>
             </div>
