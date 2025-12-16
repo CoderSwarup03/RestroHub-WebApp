@@ -49,7 +49,23 @@
             font-weight: 400;
             font-style: normal;
         }
+
+        .drink-card {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .hidden-card {
+            opacity: 0;
+            transform: scale(0.95);
+            pointer-events: none;
+            position: absolute;
+        }
+
+        .active {
+            background-color: #d18610 !important;
+        }
     </style>
+
 </head>
 
 <body>
@@ -150,7 +166,7 @@
         <div class="max-w-[90%] mx-auto bg-[#fcfcfc] relative z-10 p-6 py-2 rounded-md flex flex-col gap-5">
             <div class="flex flex-col gap-4 items-center justify-center mt-4 text-center">
                 <div class="w-full md:w-[35vw] flex flex-col gap-5">
-                    <span class="text-sm md:text-xl font-bold uppercase ">Menu</span>
+                    <span class="text-sm md:text-xl font-bold uppercase josefin-sans">Menu</span>
                     <h4 class="playfair-display text-2xl md:text-5xl font-extrabold text-center">All Dishes</h4>
                     <span class="text-[#b9bfc0] josefin-sans text-sm md:text-xl">Porro eveniet, autem ipsam corrupti
                         consectetur cum.
@@ -158,7 +174,7 @@
                 </div>
             </div>
 
-            <!-- menu main section -->
+            <!-- menu1 main section -->
             <div class="flex flex-col md:flex-row justify-between items-center gap-5">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
 
@@ -259,8 +275,7 @@
                                   hover:-translate-y-2 hover:shadow-xl">
                         <!-- ↑ Card lift + shadow on hover -->
                         <!-- Image -->
-                        <img src="./images/menu/top-view-delicious-pakistan-meal-table_23-2148821578.jpg"
-                            class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
+                        <img src="./images/menu/top-view-delicious-pakistan-meal-table_23-2148821578.jpg" class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
                                                         transition-transform duration-300
                                                                       group-hover:scale-110" alt="fruits salad">
                         <!-- ↑ Image zoom on hover -->
@@ -430,17 +445,526 @@
                             <!-- ↑ Offer badge zoom -->
                         </div>
                     </div>
-
-
-                    <!-- 🔁 COPY SAME CARD FOR OTHERS -->
-                    <!-- Just change image, title & price -->
-
                 </div>
             </div>
 
 
             <!-- border  -->
             <div class="border-b-4 border-dotted border-[#c5cacc] mt-4"></div>
+
+            <!-- menu2 section -->
+            <div class="flex flex-col gap-4 items-center justify-center mt-4 text-center">
+                <div class="w-full md:w-[35vw] flex flex-col gap-5">
+                    <span class="text-sm md:text-xl font-bold uppercase josefin-sans">01 Menu</span>
+                    <h4 class="playfair-display text-2xl md:text-5xl font-extrabold text-center">Dishes</h4>
+                    <span class="text-[#b9bfc0] josefin-sans text-sm md:text-xl">Porro eveniet, autem ipsam corrupti
+                        consectetur cum.
+                        Repudiandae dignissimos fugiat sit nam.</span>
+                </div>
+            </div>
+
+            <!-- menu2 cards -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-5">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+
+                    <!-- CARD 1 -->
+                    <div class="group border-2 border-[#c5cacc] rounded-md 
+                             flex flex-col md:flex-row gap-3 items-center p-3
+                                transition-all duration-300 ease-in-out
+                                  hover:-translate-y-2 hover:shadow-xl">
+                        <!-- ↑ Card lift + shadow on hover -->
+                        <!-- Image -->
+                        <img src="./images/menu/top-view-delicious-pakistan-meal-table_23-2148821578.jpg" class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
+                                                        transition-transform duration-300
+                                                                      group-hover:scale-110" alt="fruits salad">
+                        <!-- ↑ Image zoom on hover -->
+
+                        <!-- Content -->
+                        <div class="flex flex-col gap-3 p-2">
+                            <h4 class="playfair-display text-xl md:text-3xl font-bold
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                Сasserole
+                            </h4>
+                            <!-- ↑ Title color change -->
+
+                            <p class="josefin-sans text-[#929c9d] text-lg">
+                                Consectetur adipisicing elit. Soluta, impedit, saepe.
+                            </p>
+                        </div>
+
+                        <!-- Price & Offer -->
+                        <div class="flex flex-row md:flex-col gap-5 justify-between items-center p-2">
+                            <span class="text-2xl font-bold josefin-sans text-[#77563f] ml-2
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                <span class="text-[#929c9d]">₹</span>200
+                            </span>
+                            <!-- ↑ Price color change -->
+
+                            <span class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
+                           transition-transform duration-300
+                           group-hover:scale-105">
+                                10% OFF
+                            </span>
+                            <!-- ↑ Offer badge zoom -->
+                        </div>
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="group border-2 border-[#c5cacc] rounded-md 
+                             flex flex-col md:flex-row gap-3 items-center p-3
+                                transition-all duration-300 ease-in-out
+                                  hover:-translate-y-2 hover:shadow-xl">
+                        <!-- ↑ Card lift + shadow on hover -->
+                        <!-- Image -->
+                        <img src="./images/menu/chicken-burger-wooden-board-tomato-lettuce-side-view_141793-2754.jpg"
+                            class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl  rounded-xl p-2
+                                                        transition-transform duration-300
+                                                                      group-hover:scale-110" alt="fruits salad">
+                        <!-- ↑ Image zoom on hover -->
+
+                        <!-- Content -->
+                        <div class="flex flex-col gap-3 p-2">
+                            <h4 class="playfair-display text-xl md:text-3xl font-bold
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                King Burger
+                            </h4>
+                            <!-- ↑ Title color change -->
+
+                            <p class="josefin-sans text-[#929c9d] text-lg">
+                                Consectetur adipisicing elit. Soluta, impedit, saepe.
+                            </p>
+                        </div>
+
+                        <!-- Price & Offer -->
+                        <div class="flex flex-row md:flex-col gap-5 justify-between items-center p-2">
+                            <span class="text-2xl font-bold josefin-sans text-[#77563f] ml-2
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                <span class="text-[#929c9d]">₹</span>200
+                            </span>
+                            <!-- ↑ Price color change -->
+
+                            <span class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
+                           transition-transform duration-300
+                           group-hover:scale-105">
+                                10% OFF
+                            </span>
+                            <!-- ↑ Offer badge zoom -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-b-4 border-dotted border-[#c5cacc] mt-4"></div>
+
+            <!-- Drinks section -->
+            <div class="flex flex-col gap-4 items-center justify-center mt-4 text-center">
+                <div class="w-full md:w-[35vw] flex flex-col gap-5">
+                    <span class="text-sm md:text-xl font-bold uppercase josefin-sans">02 Menu</span>
+                    <h4 class="playfair-display text-2xl md:text-5xl font-extrabold text-center">Drinks</h4>
+                    <span class="text-[#b9bfc0] josefin-sans text-sm md:text-xl">Porro eveniet, autem ipsam corrupti
+                        consectetur cum.
+                        Repudiandae dignissimos fugiat sit nam.</span>
+                </div>
+
+                <!-- Drinks Type -->
+                <div class="flex flex-col md:flex-row gap-2 items-center">
+                    <button data-filter="all"
+                        class="filter-btn active bg-[#f39c12] text-white font-bold px-4 py-2 rounded-tl-md rounded-br-md">
+                        All Drinks
+                    </button>
+
+                    <button data-filter="alcoholic"
+                        class="filter-btn bg-[#f39c12] text-white font-bold px-4 py-2 rounded-tl-md rounded-br-md">
+                        Alcoholic Drinks
+                    </button>
+
+                    <button data-filter="non-alcoholic"
+                        class="filter-btn bg-[#f39c12] text-white font-bold px-4 py-2 rounded-tl-md rounded-br-md">
+                        Non-Alcoholic Drinks
+                    </button>
+
+                    <button data-filter="hot"
+                        class="filter-btn bg-[#f39c12] text-white font-bold px-4 py-2 rounded-tl-md rounded-br-md">
+                        Hot Beverages
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- ↑ Drinks section -->
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-5">
+                <!--alcahol derink -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <!-- alcohol drinks -->
+                    <!-- CARD 1 -->
+                    <div class="drink-card group border-2 border-[#c5cacc] rounded-md 
+                             flex flex-col md:flex-row gap-3 items-center p-3
+                                transition-all duration-300 ease-in-out
+                                  hover:-translate-y-2 hover:shadow-xl" data-category="alcoholic">
+                        <!-- ↑ Card lift + shadow on hover -->
+                        <!-- Image -->
+                        <img src="./images/menu/front-view-glass-beer-with-beer-snacks-croutons-chips-sausage-table_141793-17476.jpg"
+                            class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
+                                                        transition-transform duration-300
+                                                                      group-hover:scale-110" alt="fruits salad">
+                        <!-- ↑ Image zoom on hover -->
+
+                        <!-- Content -->
+                        <div class="flex flex-col gap-3 p-2">
+                            <h4 class="playfair-display text-xl md:text-3xl font-bold
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                Beer
+                            </h4>
+                            <!-- ↑ Title color change -->
+
+                            <p class="josefin-sans text-[#929c9d] text-lg">
+                                Consectetur adipisicing elit. Soluta, impedit, saepe.
+                            </p>
+                        </div>
+
+                        <!-- Price & Offer -->
+                        <div class="flex flex-row md:flex-col gap-5 justify-between items-center p-2">
+                            <span class="text-2xl font-bold josefin-sans text-[#77563f] ml-2
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                <span class="text-[#929c9d]">₹</span>270
+                            </span>
+                            <!-- ↑ Price color change -->
+
+                            <span class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
+                           transition-transform duration-300
+                           group-hover:scale-105">
+                                10% OFF
+                            </span>
+                            <!-- ↑ Offer badge zoom -->
+                        </div>
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="drink-card group border-2 border-[#c5cacc] rounded-md 
+                             flex flex-col md:flex-row gap-3 items-center p-3
+                                transition-all duration-300 ease-in-out
+                                  hover:-translate-y-2 hover:shadow-xl" data-category="alcoholic">
+                        <!-- ↑ Card lift + shadow on hover -->
+                        <!-- Image -->
+                        <img src="./images/menu/side-view-jug-with-red-wine-grape-dark-horizontal_176474-4227.jpg"
+                            class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl  rounded-xl p-2
+                                                        transition-transform duration-300
+                                                                      group-hover:scale-110" alt="fruits salad">
+                        <!-- ↑ Image zoom on hover -->
+
+                        <!-- Content -->
+                        <div class="flex flex-col gap-3 p-2">
+                            <h4 class="playfair-display text-xl md:text-3xl font-bold
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                Red Wine
+                            </h4>
+                            <!-- ↑ Title color change -->
+
+                            <p class="josefin-sans text-[#929c9d] text-lg">
+                                Consectetur adipisicing elit. Soluta, impedit, saepe.
+                            </p>
+                        </div>
+
+                        <!-- Price & Offer -->
+                        <div class="flex flex-row md:flex-col gap-5 justify-between items-center p-2">
+                            <span class="text-2xl font-bold josefin-sans text-[#77563f] ml-2
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                <span class="text-[#929c9d]">₹</span>200
+                            </span>
+                            <!-- ↑ Price color change -->
+
+                            <span class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
+                           transition-transform duration-300
+                           group-hover:scale-105">
+                                10% OFF
+                            </span>
+                            <!-- ↑ Offer badge zoom -->
+                        </div>
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="drink-card group border-2 border-[#c5cacc] rounded-md 
+                             flex flex-col md:flex-row gap-3 items-center p-3
+                                transition-all duration-300 ease-in-out
+                                  hover:-translate-y-2 hover:shadow-xl" data-category="alcoholic">
+                        <!-- ↑ Card lift + shadow on hover -->
+                        <!-- Image -->
+                        <img src="./images/menu/ice-cold-whiskey-cocktail-glows-wooden-table-generative-ai_188544-12384.jpg"
+                            class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl  rounded-xl p-2
+                                                        transition-transform duration-300
+                                                                      group-hover:scale-110" alt="fruits salad">
+                        <!-- ↑ Image zoom on hover -->
+
+                        <!-- Content -->
+                        <div class="flex flex-col gap-3 p-2">
+                            <h4 class="playfair-display text-xl md:text-3xl font-bold
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                Whiskey
+                            </h4>
+                            <!-- ↑ Title color change -->
+
+                            <p class="josefin-sans text-[#929c9d] text-lg">
+                                Consectetur adipisicing elit. Soluta, impedit, saepe.
+                            </p>
+                        </div>
+
+                        <!-- Price & Offer -->
+                        <div class="flex flex-row md:flex-col gap-5 justify-between items-center p-2">
+                            <span class="text-2xl font-bold josefin-sans text-[#77563f] ml-2
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                <span class="text-[#929c9d]">₹</span>200
+                            </span>
+                            <!-- ↑ Price color change -->
+
+                            <span class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
+                           transition-transform duration-300
+                           group-hover:scale-105">
+                                10% OFF
+                            </span>
+                            <!-- ↑ Offer badge zoom -->
+                        </div>
+                    </div>
+                    <!-- CARD 4 -->
+                    <div class="drink-card group border-2 border-[#c5cacc] rounded-md 
+                             flex flex-col md:flex-row gap-3 items-center p-3
+                                transition-all duration-300 ease-in-out
+                                  hover:-translate-y-2 hover:shadow-xl" data-category="alcoholic" >
+                        <!-- ↑ Card lift + shadow on hover -->
+                        <!-- Image -->
+                        <img src="./images/menu/vodka-glass-with-oliv-cucumber-red-pepper-slice_114579-3202.jpg" class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl  rounded-xl p-2
+                                                        transition-transform duration-300
+                                                                      group-hover:scale-110" alt="fruits salad">
+                        <!-- ↑ Image zoom on hover -->
+
+                        <!-- Content -->
+                        <div class="flex flex-col gap-3 p-2">
+                            <h4 class="playfair-display text-xl md:text-3xl font-bold
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                Whiskey
+                            </h4>
+                            <!-- ↑ Title color change -->
+
+                            <p class="josefin-sans text-[#929c9d] text-lg">
+                                Consectetur adipisicing elit. Soluta, impedit, saepe.
+                            </p>
+                        </div>
+
+                        <!-- Price & Offer -->
+                        <div class="flex flex-row md:flex-col gap-5 justify-between items-center p-2">
+                            <span class="text-2xl font-bold josefin-sans text-[#77563f] ml-2
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                <span class="text-[#929c9d]">₹</span>200
+                            </span>
+                            <!-- ↑ Price color change -->
+
+                            <span class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
+                           transition-transform duration-300
+                           group-hover:scale-105">
+                                10% OFF
+                            </span>
+                            <!-- ↑ Offer badge zoom -->
+                        </div>
+                    </div>
+
+                    <!-- non alcoholic drink -->
+                    <!-- CARD 1 -->
+                    <div class="drink-card group border-2 border-[#c5cacc] rounded-md 
+                             flex flex-col md:flex-row gap-3 items-center p-3
+                                transition-all duration-300 ease-in-out
+                                  hover:-translate-y-2 hover:shadow-xl" data-category="non-alcoholic">
+                        <!-- ↑ Card lift + shadow on hover -->
+                        <!-- Image -->
+                        <img src="./images/menu/mojito-drink-with-lime-lemon-mint-wood-table_1150-12269.jpg" class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
+                                                        transition-transform duration-300
+                                                                      group-hover:scale-110" alt="fruits salad">
+                        <!-- ↑ Image zoom on hover -->
+
+                        <!-- Content -->
+                        <div class="flex flex-col gap-3 p-2">
+                            <h4 class="playfair-display text-xl md:text-3xl font-bold
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                Fresh Lime Soda
+                            </h4>
+                            <!-- ↑ Title color change -->
+
+                            <p class="josefin-sans text-[#929c9d] text-lg">
+                                Consectetur adipisicing elit. Soluta, impedit, saepe.
+                            </p>
+                        </div>
+
+                        <!-- Price & Offer -->
+                        <div class="flex flex-row md:flex-col gap-5 justify-between items-center p-2">
+                            <span class="text-2xl font-bold josefin-sans text-[#77563f] ml-2
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                <span class="text-[#929c9d]">₹</span>270
+                            </span>
+                            <!-- ↑ Price color change -->
+
+                            <span class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
+                           transition-transform duration-300
+                           group-hover:scale-105">
+                                10% OFF
+                            </span>
+                            <!-- ↑ Offer badge zoom -->
+                        </div>
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="drink-card group border-2 border-[#c5cacc] rounded-md 
+                             flex flex-col md:flex-row gap-3 items-center p-3
+                                transition-all duration-300 ease-in-out
+                                  hover:-translate-y-2 hover:shadow-xl" data-category="non-alcoholic">
+                        <!-- ↑ Card lift + shadow on hover -->
+                        <!-- Image -->
+                        <img src="./images/menu/iced-coffee-with-chocolate-syrup_1150-18528.avif" class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
+                                                        transition-transform duration-300
+                                                                      group-hover:scale-110" alt="fruits salad">
+                        <!-- ↑ Image zoom on hover -->
+
+                        <!-- Content -->
+                        <div class="flex flex-col gap-3 p-2">
+                            <h4 class="playfair-display text-xl md:text-3xl font-bold
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                Cold Coffee
+                            </h4>
+                            <!-- ↑ Title color change -->
+
+                            <p class="josefin-sans text-[#929c9d] text-lg">
+                                Consectetur adipisicing elit. Soluta, impedit, saepe.
+                            </p>
+                        </div>
+
+                        <!-- Price & Offer -->
+                        <div class="flex flex-row md:flex-col gap-5 justify-between items-center p-2">
+                            <span class="text-2xl font-bold josefin-sans text-[#77563f] ml-2
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                <span class="text-[#929c9d]">₹</span>270
+                            </span>
+                            <!-- ↑ Price color change -->
+
+                            <span class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
+                           transition-transform duration-300
+                           group-hover:scale-105">
+                                10% OFF
+                            </span>
+                            <!-- ↑ Offer badge zoom -->
+                        </div>
+                    </div>
+
+                    <!-- Hot Beverages -->
+
+                    <!-- CARD 2  -->
+                    <div class="drink-card group border-2 border-[#c5cacc] rounded-md 
+                             flex flex-col md:flex-row gap-3 items-center p-3
+                                transition-all duration-300 ease-in-out
+                                  hover:-translate-y-2 hover:shadow-xl" data-category="hot">
+                        <!-- ↑ Card lift + shadow on hover -->
+                        <!-- Image -->
+                        <img src="./images/menu/high-angle-delicious-indian-drink_23-2149312361.jpg" class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
+                                                        transition-transform duration-300
+                                                                      group-hover:scale-110" alt="fruits salad">
+                        <!-- ↑ Image zoom on hover -->
+
+                        <!-- Content -->
+                        <div class="flex flex-col gap-3 p-2">
+                            <h4 class="playfair-display text-xl md:text-3xl font-bold
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                Masala Tea
+                            </h4>
+                            <!-- ↑ Title color change -->
+
+                            <p class="josefin-sans text-[#929c9d] text-lg">
+                                Consectetur adipisicing elit. Soluta, impedit, saepe.
+                            </p>
+                        </div>
+
+                        <!-- Price & Offer -->
+                        <div class="flex flex-row md:flex-col gap-5 justify-between items-center p-2">
+                            <span class="text-2xl font-bold josefin-sans text-[#77563f] ml-2
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                <span class="text-[#929c9d]">₹</span>270
+                            </span>
+                            <!-- ↑ Price color change -->
+
+                            <span class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
+                           transition-transform duration-300
+                           group-hover:scale-105">
+                                10% OFF
+                            </span>
+                            <!-- ↑ Offer badge zoom -->
+                        </div>
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="drink-card group border-2 border-[#c5cacc] rounded-md 
+                             flex flex-col md:flex-row gap-3 items-center p-3
+                                transition-all duration-300 ease-in-out
+                                  hover:-translate-y-2 hover:shadow-xl" data-category="hot">
+                        <!-- ↑ Card lift + shadow on hover -->
+                        <!-- Image -->
+                        <img src="./images/menu/mug-retro-healthy-eating-straw-drink_1172-462.jpg" class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
+                                                        transition-transform duration-300
+                                                                      group-hover:scale-110" alt="fruits salad">
+                        <!-- ↑ Image zoom on hover -->
+
+                        <!-- Content -->
+                        <div class="flex flex-col gap-3 p-2">
+                            <h4 class="playfair-display text-xl md:text-3xl font-bold
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                Green Tea
+                            </h4>
+                            <!-- ↑ Title color change -->
+
+                            <p class="josefin-sans text-[#929c9d] text-lg">
+                                Consectetur adipisicing elit. Soluta, impedit, saepe.
+                            </p>
+                        </div>
+
+                        <!-- Price & Offer -->
+                        <div class="flex flex-row md:flex-col gap-5 justify-between items-center p-2">
+                            <span class="text-2xl font-bold josefin-sans text-[#77563f] ml-2
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                <span class="text-[#929c9d]">₹</span>270
+                            </span>
+                            <!-- ↑ Price color change -->
+
+                            <span class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
+                           transition-transform duration-300
+                           group-hover:scale-105">
+                                10% OFF
+                            </span>
+                            <!-- ↑ Offer badge zoom -->
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div class="border-b-4 border-dotted border-[#c5cacc] mt-4"></div>
+
 
             <!-- Services -->
             <div class="flex flex-col md:flex-row justify-between items-center gap-4 mt-5">
@@ -545,6 +1069,28 @@
         closeMenu.addEventListener("click", closeMobileMenu);
         overlay.addEventListener("click", closeMobileMenu);
     </script>
+    <script>
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const drinkCards = document.querySelectorAll('.drink-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.dataset.filter;
+
+                drinkCards.forEach(card => {
+                    const category = card.dataset.category;
+
+                    if (filter === 'all' || filter === category) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+
+
 </body>
 
 </html>
