@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="flex flex-col md:flex-row justify-between items-center gap-5">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+
+        <!-- CARD 1 -->
+        <div
+            class="group border-2 border-[#c5cacc] rounded-md 
+                   flex flex-col md:flex-row gap-3 items-center p-3
+                   transition-all duration-300 ease-in-out
+                   hover:-translate-y-2 hover:shadow-xl">
+            <!-- ↑ Card lift + shadow on hover -->
+
+            <!-- Image -->
+            <img src="./images/menu/top-view-delicious-fruit-salad-inside-plate-with-fresh-fruits-dark-tropical-fruit-tree-exotic-ripe-diet-photo_140725-109944.avif"
+                class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-md p-2
+                       transition-transform duration-300
+                       group-hover:scale-110"
+                alt="fruits salad">
+            <!-- ↑ Image zoom on hover -->
+
+            <!-- Content -->
+            <div class="flex flex-col gap-3 p-2">
+                <h4
+                    class="playfair-display text-xl md:text-3xl font-bold
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                    Fruits Salad
+                </h4>
+                <!-- ↑ Title color change -->
+
+                <p class="josefin-sans text-[#929c9d] text-lg">
+                    Consectetur adipisicing elit. Soluta, impedit, saepe.
+                </p>
+            </div>
+
+            <!-- Price & Offer -->
+            <div class="flex flex-row md:flex-col gap-5 justify-between items-center p-2">
+                <span
+                    class="text-2xl font-bold josefin-sans text-[#77563f] ml-2
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                    <span class="text-[#929c9d]">₹</span>200
+                </span>
+                <!-- ↑ Price color change -->
+
+                <span
+                    class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
+                           transition-transform duration-300
+                           group-hover:scale-105">
+                    10% OFF
+                </span>
+                <!-- ↑ Offer badge zoom -->
+            </div>
+        </div>
+
+        <!-- 🔁 COPY SAME CARD FOR OTHERS -->
+        <!-- Just change image, title & price -->
+        
+    </div>
+</div>
+
+</body>
+</html>

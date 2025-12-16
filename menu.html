@@ -1,13 +1,550 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>RestroHub</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restika</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* font-part */
+        .poppins-regular {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .josefin-sans {
+            font-family: "Josefin Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .playfair-display {
+            font-family: "Playfair Display", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
 </head>
+
 <body>
     <section>
-        
+        <div class="relative">
+            <!-- Background Image -->
+            <img src="./images/menu/top-view-asian-food-ingredients-mix-with-copy-space_23-2148377557.avif"
+                class="w-screen h-[500px] object-cover" alt="about us">
+
+            <!-- 🔥 Black Shade Overlay -->
+            <div class="absolute inset-0 bg-black/35"></div>
+
+            <!-- Navbar -->
+            <nav
+                class="max-w-[95%] mx-auto flex items-center justify-between josefin-sans bg-white/90 backdrop-blur-md px-2 py-2 md:px-3 md:py-5 rounded-md shadow-md absolute top-4 left-1/2 transform -translate-x-1/2 z-50 w-[90%] fixed">
+
+                <h4 class="text-xl md:text-3xl font-bold text-[#1b2047]">RestroHub</h4>
+
+                <!-- Desktop Menu -->
+                <div class="flex gap-4 items-center hidden md:flex">
+                    <ul class="flex gap-3 items-center text-lg font-semibold">
+                        <li><a href="./index.html" class="text-[#1b2047] hover:text-[#fe7f32]">Home</a></li>
+                        <li><a href="./about.html" class="text-[#1b2047] hover:text-[#fe7f32]">About Us</a></li>
+                        <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Menu</a></li>
+                        <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Gallary</a></li>
+                        <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Contact</a></li>
+                    </ul>
+
+                    <button class="bg-[#fe7f32] px-4 py-2 text-white rounded">
+                        Book a table
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden backdrop-blur-md">
+                    <button id="menuBtn">
+                        <i class="hgi hgi-stroke hgi-menu-restaurant text-2xl text-[#21264c]"></i>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Mobile Menu -->
+            <div id="overlay" class="hidden fixed inset-0 bg-black/50 z-[900]"></div>
+
+            <div id="mobileMenu" class="hidden md:hidden fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md shadow-lg z-[999] 
+           translate-y-[-100%] opacity-0 transition-all duration-300">
+
+                <!-- Close Button -->
+                <div class="flex justify-end pr-4 pt-4">
+                    <i id="closeMenu" class="hgi hgi-stroke hgi-cancel-square text-3xl text-[#21264c]"></i>
+                </div>
+
+                <!-- Menu Items -->
+                <ul class="flex flex-col gap-4 px-6 py-4 text-lg font-semibold">
+                    <li><a href="./index.html" class="text-[#1b2047] hover:text-[#fe7f32]">Home</a></li>
+                    <li><a href="./about.html" class="text-[#1b2047] hover:text-[#fe7f32]">About Us</a></li>
+                    <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Menu</a></li>
+                    <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Gallery</a></li>
+                    <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Contact</a></li>
+                </ul>
+
+                <!-- Fixed Book Button -->
+                <div class="px-6 pb-6">
+                    <a href="#" class="block text-center bg-[#fe7f32] px-4 py-3 text-white rounded-lg font-semibold">
+                        Book a Table
+                    </a>
+                </div>
+            </div>
+
+            <!-- Text Content -->
+            <div class="absolute top-[20%] md:top-[28%] left-[15%] md:left-[25%] flex flex-col gap-5 items-start z-20">
+                <span class="text-sm uppercase md:text-xl font-bold josefin-sans text-white">
+                    Menu
+                </span>
+                <h2 class="playfair-display text-[#e5ebef] text-2xl md:text-6xl font-bold w-full">
+                    Discover our menu
+                </h2>
+                <span class="josefin-sans text-white w-full md:w-[22vw]">
+                    Quaerat debitis, vel, sapiente dicta sequi
+                    labore porro pariatur harum expedita.
+                </span>
+            </div>
+        </div>
     </section>
+
+    <!-- all menu section -->
+
+    <div class="relative">
+
+        <!-- Background Image -->
+        <img src="./images/background/top-view-baked-potatoes-with-cooked-vegetables-dark-desk_140725-79584.jpg"
+            class="w-full absolute inset-0 object-coverw-full h-full object-cover" alt="">
+
+        <!-- Black Shade ON Image -->
+        <div class="absolute inset-0 bg-black/60"></div>
+
+        <!-- Content -->
+        <div class="max-w-[90%] mx-auto bg-[#fcfcfc] relative z-10 p-6 py-2 rounded-md flex flex-col gap-5">
+            <div class="flex flex-col gap-4 items-center justify-center mt-4 text-center">
+                <div class="w-full md:w-[35vw] flex flex-col gap-5">
+                    <span class="text-sm md:text-xl font-bold uppercase ">Menu</span>
+                    <h4 class="playfair-display text-2xl md:text-5xl font-extrabold text-center">All Dishes</h4>
+                    <span class="text-[#b9bfc0] josefin-sans text-sm md:text-xl">Porro eveniet, autem ipsam corrupti
+                        consectetur cum.
+                        Repudiandae dignissimos fugiat sit nam.</span>
+                </div>
+            </div>
+
+            <!-- menu main section -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-5">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+
+                    <!-- CARD 1 -->
+                    <div class="group border-2 border-[#c5cacc] rounded-md 
+                             flex flex-col md:flex-row gap-3 items-center p-3
+                                transition-all duration-300 ease-in-out
+                                  hover:-translate-y-2 hover:shadow-xl">
+                        <!-- ↑ Card lift + shadow on hover -->
+                        <!-- Image -->
+                        <img src="./images/menu/top-view-delicious-fruit-salad-inside-plate-with-fresh-fruits-dark-tropical-fruit-tree-exotic-ripe-diet-photo_140725-109944.avif"
+                            class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
+                                                        transition-transform duration-300
+                                                                      group-hover:scale-110" alt="fruits salad">
+                        <!-- ↑ Image zoom on hover -->
+
+                        <!-- Content -->
+                        <div class="flex flex-col gap-3 p-2">
+                            <h4 class="playfair-display text-xl md:text-3xl font-bold
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                Fruits Salad
+                            </h4>
+                            <!-- ↑ Title color change -->
+
+                            <p class="josefin-sans text-[#929c9d] text-lg">
+                                Consectetur adipisicing elit. Soluta, impedit, saepe.
+                            </p>
+                        </div>
+
+                        <!-- Price & Offer -->
+                        <div class="flex flex-row md:flex-col gap-5 justify-between items-center p-2">
+                            <span class="text-2xl font-bold josefin-sans text-[#77563f] ml-2
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                <span class="text-[#929c9d]">₹</span>200
+                            </span>
+                            <!-- ↑ Price color change -->
+
+                            <span class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
+                           transition-transform duration-300
+                           group-hover:scale-105">
+                                10% OFF
+                            </span>
+                            <!-- ↑ Offer badge zoom -->
+                        </div>
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="group border-2 border-[#c5cacc] rounded-md 
+                             flex flex-col md:flex-row gap-3 items-center p-3
+                                transition-all duration-300 ease-in-out
+                                  hover:-translate-y-2 hover:shadow-xl">
+                        <!-- ↑ Card lift + shadow on hover -->
+                        <!-- Image -->
+                        <img src="./images/menu/stack-fluffy-pancakes-drizzled-with-maple-syrup-topped-with-blueberries-raspberries_9975-124558.jpg"
+                            class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl  rounded-xl p-2
+                                                        transition-transform duration-300
+                                                                      group-hover:scale-110" alt="fruits salad">
+                        <!-- ↑ Image zoom on hover -->
+
+                        <!-- Content -->
+                        <div class="flex flex-col gap-3 p-2">
+                            <h4 class="playfair-display text-xl md:text-3xl font-bold
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                Pancakes
+                            </h4>
+                            <!-- ↑ Title color change -->
+
+                            <p class="josefin-sans text-[#929c9d] text-lg">
+                                Consectetur adipisicing elit. Soluta, impedit, saepe.
+                            </p>
+                        </div>
+
+                        <!-- Price & Offer -->
+                        <div class="flex flex-row md:flex-col gap-5 justify-between items-center p-2">
+                            <span class="text-2xl font-bold josefin-sans text-[#77563f] ml-2
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                <span class="text-[#929c9d]">₹</span>200
+                            </span>
+                            <!-- ↑ Price color change -->
+
+                            <span class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
+                           transition-transform duration-300
+                           group-hover:scale-105">
+                                10% OFF
+                            </span>
+                            <!-- ↑ Offer badge zoom -->
+                        </div>
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="group border-2 border-[#c5cacc] rounded-md 
+                             flex flex-col md:flex-row gap-3 items-center p-3
+                                transition-all duration-300 ease-in-out
+                                  hover:-translate-y-2 hover:shadow-xl">
+                        <!-- ↑ Card lift + shadow on hover -->
+                        <!-- Image -->
+                        <img src="./images/menu/top-view-delicious-pakistan-meal-table_23-2148821578.jpg"
+                            class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
+                                                        transition-transform duration-300
+                                                                      group-hover:scale-110" alt="fruits salad">
+                        <!-- ↑ Image zoom on hover -->
+
+                        <!-- Content -->
+                        <div class="flex flex-col gap-3 p-2">
+                            <h4 class="playfair-display text-xl md:text-3xl font-bold
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                Сasserole
+                            </h4>
+                            <!-- ↑ Title color change -->
+
+                            <p class="josefin-sans text-[#929c9d] text-lg">
+                                Consectetur adipisicing elit. Soluta, impedit, saepe.
+                            </p>
+                        </div>
+
+                        <!-- Price & Offer -->
+                        <div class="flex flex-row md:flex-col gap-5 justify-between items-center p-2">
+                            <span class="text-2xl font-bold josefin-sans text-[#77563f] ml-2
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                <span class="text-[#929c9d]">₹</span>200
+                            </span>
+                            <!-- ↑ Price color change -->
+
+                            <span class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
+                           transition-transform duration-300
+                           group-hover:scale-105">
+                                10% OFF
+                            </span>
+                            <!-- ↑ Offer badge zoom -->
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="group border-2 border-[#c5cacc] rounded-md 
+                             flex flex-col md:flex-row gap-3 items-center p-3
+                                transition-all duration-300 ease-in-out
+                                  hover:-translate-y-2 hover:shadow-xl">
+                        <!-- ↑ Card lift + shadow on hover -->
+                        <!-- Image -->
+                        <img src="./images/menu/chicken-burger-wooden-board-tomato-lettuce-side-view_141793-2754.jpg"
+                            class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
+                                                        transition-transform duration-300
+                                                                      group-hover:scale-110" alt="fruits salad">
+                        <!-- ↑ Image zoom on hover -->
+
+                        <!-- Content -->
+                        <div class="flex flex-col gap-3 p-2">
+                            <h4 class="playfair-display text-xl md:text-3xl font-bold
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                King Burger
+                            </h4>
+                            <!-- ↑ Title color change -->
+
+                            <p class="josefin-sans text-[#929c9d] text-lg">
+                                Consectetur adipisicing elit. Soluta, impedit, saepe.
+                            </p>
+                        </div>
+
+                        <!-- Price & Offer -->
+                        <div class="flex flex-row md:flex-col gap-5 justify-between items-center p-2">
+                            <span class="text-2xl font-bold josefin-sans text-[#77563f] ml-2
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                <span class="text-[#929c9d]">₹</span>200
+                            </span>
+                            <!-- ↑ Price color change -->
+
+                            <span class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
+                           transition-transform duration-300
+                           group-hover:scale-105">
+                                10% OFF
+                            </span>
+                            <!-- ↑ Offer badge zoom -->
+                        </div>
+                    </div>
+
+                    <!-- card 5 -->
+                    <div class="group border-2 border-[#c5cacc] rounded-md 
+                             flex flex-col md:flex-row gap-3 items-center p-3
+                                transition-all duration-300 ease-in-out
+                                  hover:-translate-y-2 hover:shadow-xl">
+                        <!-- ↑ Card lift + shadow on hover -->
+                        <!-- Image -->
+                        <img src="./images/menu/front-view-delicious-fresh-juices-fruits-wooden-tray-brown-background_140725-94504.jpg"
+                            class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
+                                                        transition-transform duration-300
+                                                                      group-hover:scale-110" alt="fruits salad">
+                        <!-- ↑ Image zoom on hover -->
+
+                        <!-- Content -->
+                        <div class="flex flex-col gap-3 p-2">
+                            <h4 class="playfair-display text-xl md:text-3xl font-bold
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                Juice
+                            </h4>
+                            <!-- ↑ Title color change -->
+
+                            <p class="josefin-sans text-[#929c9d] text-lg">
+                                Consectetur adipisicing elit. Soluta, impedit, saepe.
+                            </p>
+                        </div>
+
+                        <!-- Price & Offer -->
+                        <div class="flex flex-row md:flex-col gap-5 justify-between items-center p-2">
+                            <span class="text-2xl font-bold josefin-sans text-[#77563f] ml-2
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                <span class="text-[#929c9d]">₹</span>200
+                            </span>
+                            <!-- ↑ Price color change -->
+
+                            <span class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
+                           transition-transform duration-300
+                           group-hover:scale-105">
+                                10% OFF
+                            </span>
+                            <!-- ↑ Offer badge zoom -->
+                        </div>
+                    </div>
+                    <!-- card 6 -->
+                    <div class="group border-2 border-[#c5cacc] rounded-md 
+                             flex flex-col md:flex-row gap-3 items-center p-3
+                                transition-all duration-300 ease-in-out
+                                  hover:-translate-y-2 hover:shadow-xl">
+                        <!-- ↑ Card lift + shadow on hover -->
+                        <!-- Image -->
+                        <img src="./images/menu/front-view-glass-beer-with-beer-snacks-croutons-chips-sausage-table_141793-17476.jpg"
+                            class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
+                                                        transition-transform duration-300
+                                                                      group-hover:scale-110" alt="fruits salad">
+                        <!-- ↑ Image zoom on hover -->
+
+                        <!-- Content -->
+                        <div class="flex flex-col gap-3 p-2">
+                            <h4 class="playfair-display text-xl md:text-3xl font-bold
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                Beer
+                            </h4>
+                            <!-- ↑ Title color change -->
+
+                            <p class="josefin-sans text-[#929c9d] text-lg">
+                                Consectetur adipisicing elit. Soluta, impedit, saepe.
+                            </p>
+                        </div>
+
+                        <!-- Price & Offer -->
+                        <div class="flex flex-row md:flex-col gap-5 justify-between items-center p-2">
+                            <span class="text-2xl font-bold josefin-sans text-[#77563f] ml-2
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                <span class="text-[#929c9d]">₹</span>200
+                            </span>
+                            <!-- ↑ Price color change -->
+
+                            <span class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
+                           transition-transform duration-300
+                           group-hover:scale-105">
+                                10% OFF
+                            </span>
+                            <!-- ↑ Offer badge zoom -->
+                        </div>
+                    </div>
+
+
+                    <!-- 🔁 COPY SAME CARD FOR OTHERS -->
+                    <!-- Just change image, title & price -->
+
+                </div>
+            </div>
+
+
+            <!-- border  -->
+            <div class="border-b-4 border-dotted border-[#c5cacc] mt-4"></div>
+
+            <!-- Services -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 mt-5">
+                <div class="border-2 border-[#c5cacc] rounded-md flex flex-col gap-3 items-center p-3">
+                    <img src="./images/about/icon-serv-1-256x256.png" class="h-[65px] w-[65px]" alt="">
+                    <h4 class="text-lg md:text-2xl font-bold josefin-sans">Menu for every taste</h4>
+                    <span class="josefin-sans text-sm md:text-xl text-[#c5cacc]">Dolor sit amet, consectetur
+                        adipisicing elit et
+                        molestias possimus</span>
+                </div>
+                <div class="border-2 border-[#c5cacc] rounded-md flex flex-col gap-3 items-center p-3">
+                    <img src="./images/about/icon-serv-2-256x256.png" class="h-[65px] w-[65px]" alt="">
+                    <h4 class="text-lg md:text-2xl font-bold josefin-sans">Always fresh ingredients</h4>
+                    <span class="josefin-sans text-sm md:text-xl text-[#c5cacc]">Assumenda possimus eaque illo iste,
+                        autem. Porro eveniet autem</span>
+                </div>
+                <div class="border-2 border-[#c5cacc] rounded-md flex flex-col gap-3 items-center p-3">
+                    <img src="./images/about/icon-serv-3-256x256.png" class="h-[65px] w-[65px]" alt="">
+                    <h4 class="text-lg md:text-2xl font-bold josefin-sans">Experienced chefs</h4>
+                    <span class="josefin-sans text-sm md:text-xl text-[#c5cacc]">Rolorem, beatae dolorum,
+                        praesentium itaque et quam quaerat</span>
+                </div>
+            </div>
+
+            <!-- border -->
+            <div class="border-b-4 border-dotted border-[#c5cacc] mt-4">
+
+            </div>
+
+            <div class="relative mx-auto rounded-md overflow-hidden h-[500px] md:h-[50vh]">
+                <!-- Image -->
+                <img src="./images/about/asian-food-chinese-noodles-with-vegetables-shrimp-old-rustic-background_220925-10831.avif"
+                    class="w-full h-full md:h-screen object-cover" alt="">
+
+                <!-- Black Shade -->
+                <div class="absolute inset-0 bg-black/60"></div>
+
+                <!-- Text ON TOP of Image -->
+                <div
+                    class="absolute bottom-5 left-5 right-2 text-white flex flex-col md:flex-row items-center justify-between gap-4">
+                    <div class="flex flex-col gap-2">
+                        <h4 class="text-2xl md:text-4xl md:text-5xl playfair-display font-bold">Working hours</h4>
+                        <span class="text-md md:text-lg">Rolorem, beatae dolorum, praesentium itaque et quam
+                            quaerat.</span>
+                        <div class="flex flex-col md:flex-row gap-5">
+                            <button
+                                class="bg-[#f39c12] px-5 py-3 rounded-md cursor-pointer text-black uppercase josefin-sans">
+                                <a href="#">Book a table</a>
+                            </button>
+                            <button class="uppercase josefin-sans">
+                                <a href="">Contact Us</a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-[#ffffff] px-5 py-3 rounded-md w-full md:w-[20vw]">
+                        <div class="flex flex-col gap-3 items-center text-center text-black">
+                            <span class="josefin-sans text-md font-bold uppercase">Sunday to Tuesday</span>
+                            <span class="playfair-display text-xl font-bold">10:00 - 22:00</span>
+                            <span class="josefin-sans text-md font-bold uppercase">Wednesday to Saturday</span>
+                            <span class="playfair-display text-xl font-bold">10:00 - 23:00</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- script section -->
+    <script>
+        // navbarMenu
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const closeMenu = document.getElementById("closeMenu");
+        const overlay = document.getElementById("overlay");
+
+        // OPEN MENU
+        menuBtn.addEventListener("click", () => {
+            overlay.classList.remove("hidden");
+
+            mobileMenu.classList.remove("hidden");
+            setTimeout(() => {
+                mobileMenu.classList.remove("translate-y-[-100%]", "opacity-0");
+                mobileMenu.classList.add("translate-y-0", "opacity-100");
+            }, 10);
+        });
+
+        // CLOSE MENU
+        function closeMobileMenu() {
+            mobileMenu.classList.add("translate-y-[-100%]", "opacity-0");
+            mobileMenu.classList.remove("translate-y-0", "opacity-100");
+
+            overlay.classList.add("hidden");
+
+            setTimeout(() => {
+                mobileMenu.classList.add("hidden");
+            }, 300);
+        }
+
+        closeMenu.addEventListener("click", closeMobileMenu);
+        overlay.addEventListener("click", closeMobileMenu);
+    </script>
 </body>
+
 </html>
