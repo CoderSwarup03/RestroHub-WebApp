@@ -89,13 +89,13 @@
                     <ul class="flex gap-3 items-center text-lg font-semibold">
                         <li><a href="./index.html" class="text-[#1b2047] hover:text-[#fe7f32]">Home</a></li>
                         <li><a href="./about.html" class="text-[#1b2047] hover:text-[#fe7f32]">About Us</a></li>
-                        <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Menu</a></li>
+                        <li><a href="./menu.html" class="text-[#1b2047] hover:text-[#fe7f32]">Menu</a></li>
                         <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Gallary</a></li>
                         <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Contact</a></li>
                     </ul>
 
                     <button class="bg-[#fe7f32] px-4 py-2 text-white rounded">
-                        Book a table
+                        <a href="./booktable.html">Book a table</a>
                     </button>
                 </div>
 
@@ -122,14 +122,15 @@
                 <ul class="flex flex-col gap-4 px-6 py-4 text-lg font-semibold">
                     <li><a href="./index.html" class="text-[#1b2047] hover:text-[#fe7f32]">Home</a></li>
                     <li><a href="./about.html" class="text-[#1b2047] hover:text-[#fe7f32]">About Us</a></li>
-                    <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Menu</a></li>
+                    <li><a href="./menu.html" class="text-[#1b2047] hover:text-[#fe7f32]">Menu</a></li>
                     <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Gallery</a></li>
                     <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Contact</a></li>
                 </ul>
 
                 <!-- Fixed Book Button -->
                 <div class="px-6 pb-6">
-                    <a href="#" class="block text-center bg-[#fe7f32] px-4 py-3 text-white rounded-lg font-semibold">
+                    <a href="./booktable.html"
+                        class="block text-center bg-[#fe7f32] px-4 py-3 text-white rounded-lg font-semibold">
                         Book a Table
                     </a>
                 </div>
@@ -154,7 +155,6 @@
     <!-- all menu section -->
 
     <div class="relative">
-
         <!-- Background Image -->
         <img src="./images/background/top-view-baked-potatoes-with-cooked-vegetables-dark-desk_140725-79584.jpg"
             class="w-full absolute inset-0 object-coverw-full h-full object-cover" alt="">
@@ -165,28 +165,65 @@
         <!-- Content -->
         <div class="max-w-[90%] mx-auto bg-[#fcfcfc] relative z-10 p-6 py-2 rounded-md flex flex-col gap-5">
             <div class="flex flex-col gap-4 items-center justify-center mt-4 text-center">
+                <!-- all veg and non-veg section -->
                 <div class="w-full md:w-[35vw] flex flex-col gap-5">
                     <span class="text-sm md:text-xl font-bold uppercase josefin-sans">Menu</span>
-                    <h4 class="playfair-display text-2xl md:text-5xl font-extrabold text-center">All Dishes</h4>
+                    <h4 class="playfair-display text-2xl md:text-5xl font-extrabold text-center">Most Popular Items</h4>
                     <span class="text-[#b9bfc0] josefin-sans text-sm md:text-xl">Porro eveniet, autem ipsam corrupti
                         consectetur cum.
                         Repudiandae dignissimos fugiat sit nam.</span>
                 </div>
+
+                <!-- Drinks Type -->
+                <div class="flex flex-wrap md:flex-row gap-2 items-center">
+                    <button data-filter="all"
+                        class="filter-btn active bg-[#f39c12] text-white font-bold px-2 md:px-4 py-1 md:py-2 rounded-tl-md rounded-br-md">
+                        All
+                    </button>
+
+                    <button data-filter="veg"
+                        class="filter-btn bg-[#f39c12] text-white font-bold px-2 md:px-4 py-1 md:py-2 rounded-tl-md rounded-br-md">
+                        Veg
+                    </button>
+
+                    <button data-filter="non-veg"
+                        class="filter-btn bg-[#f39c12] text-white font-bold px-2 md:px-4 py-1 md:py-2 rounded-tl-md rounded-br-md">
+                        Non-Veg
+                    </button>
+
+                    <button data-filter="vegan"
+                        class="filter-btn bg-[#f39c12] text-white font-bold px-2 md:px-4 py-1 md:py-2 rounded-tl-md rounded-br-md">
+                        Vegan
+                    </button>
+
+                    <button data-filter="beverages"
+                        class="filter-btn bg-[#f39c12] text-white font-bold px-2 md:px-4 py-1 md:py-2 rounded-tl-md rounded-br-md">
+                        Beverages
+                    </button>
+
+                    <button data-filter="desserts"
+                        class="filter-btn bg-[#f39c12] text-white font-bold px-2 md:px-4 py-1 md:py-2 rounded-tl-md rounded-br-md">
+                        Desserts
+                    </button>
+                </div>
+
+
             </div>
 
-            <!-- menu1 main section -->
-            <div class="flex flex-col md:flex-row justify-between items-center gap-5">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <!-- popular items section -->
 
+            <div class="flex flex-col md:flex-row justify-between items-center gap-5">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <!-- veg section -->
                     <!-- CARD 1 -->
-                    <div class="group border-2 border-[#c5cacc] rounded-md 
+                    <div class="drink-card group border-2 border-[#c5cacc] rounded-md 
                              flex flex-col md:flex-row gap-3 items-center p-3
                                 transition-all duration-300 ease-in-out
-                                  hover:-translate-y-2 hover:shadow-xl">
+                                  hover:-translate-y-2 hover:shadow-xl" data-category="veg">
                         <!-- ↑ Card lift + shadow on hover -->
                         <!-- Image -->
-                        <img src="./images/menu/top-view-delicious-fruit-salad-inside-plate-with-fresh-fruits-dark-tropical-fruit-tree-exotic-ripe-diet-photo_140725-109944.avif"
-                            class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
+                        <img src="./images/veg/delicious-meal-table_23-2150857698.jpg" class="h-[20vh] md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
                                                         transition-transform duration-300
                                                                       group-hover:scale-110" alt="fruits salad">
                         <!-- ↑ Image zoom on hover -->
@@ -196,7 +233,7 @@
                             <h4 class="playfair-display text-xl md:text-3xl font-bold
                            transition-colors duration-300
                            group-hover:text-[#d18610]">
-                                Fruits Salad
+                                Paneer Butter Masala
                             </h4>
                             <!-- ↑ Title color change -->
 
@@ -210,28 +247,28 @@
                             <span class="text-2xl font-bold josefin-sans text-[#77563f] ml-2
                            transition-colors duration-300
                            group-hover:text-[#d18610]">
-                                <span class="text-[#929c9d]">₹</span>200
+                                <span class="text-[#929c9d]">₹</span>270
                             </span>
                             <!-- ↑ Price color change -->
 
-                            <span class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
+                            <button class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
                            transition-transform duration-300
                            group-hover:scale-105">
-                                10% OFF
-                            </span>
+                                <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+                            </button>
                             <!-- ↑ Offer badge zoom -->
                         </div>
                     </div>
 
                     <!-- CARD 2 -->
-                    <div class="group border-2 border-[#c5cacc] rounded-md 
+                    <div class="drink-card group border-2 border-[#c5cacc] rounded-md 
                              flex flex-col md:flex-row gap-3 items-center p-3
                                 transition-all duration-300 ease-in-out
-                                  hover:-translate-y-2 hover:shadow-xl">
+                                  hover:-translate-y-2 hover:shadow-xl" data-category="veg">
                         <!-- ↑ Card lift + shadow on hover -->
                         <!-- Image -->
-                        <img src="./images/menu/stack-fluffy-pancakes-drizzled-with-maple-syrup-topped-with-blueberries-raspberries_9975-124558.jpg"
-                            class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl  rounded-xl p-2
+                        <img src="./images/veg/indian-dhal-spicy-curry-bowl-spices-herbs-rustic-black-wooden-table_2829-18712.avif"
+                            class="h-[20vh] md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl  rounded-xl p-2
                                                         transition-transform duration-300
                                                                       group-hover:scale-110" alt="fruits salad">
                         <!-- ↑ Image zoom on hover -->
@@ -241,7 +278,7 @@
                             <h4 class="playfair-display text-xl md:text-3xl font-bold
                            transition-colors duration-300
                            group-hover:text-[#d18610]">
-                                Pancakes
+                                Dal Tadka
                             </h4>
                             <!-- ↑ Title color change -->
 
@@ -259,23 +296,24 @@
                             </span>
                             <!-- ↑ Price color change -->
 
-                            <span class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
+                            <button class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
                            transition-transform duration-300
                            group-hover:scale-105">
-                                10% OFF
-                            </span>
+                                <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+                            </button>
                             <!-- ↑ Offer badge zoom -->
                         </div>
                     </div>
 
                     <!-- CARD 3 -->
-                    <div class="group border-2 border-[#c5cacc] rounded-md 
+                    <div class="drink-card group border-2 border-[#c5cacc] rounded-md 
                              flex flex-col md:flex-row gap-3 items-center p-3
                                 transition-all duration-300 ease-in-out
-                                  hover:-translate-y-2 hover:shadow-xl">
+                                  hover:-translate-y-2 hover:shadow-xl" data-category="veg">
                         <!-- ↑ Card lift + shadow on hover -->
                         <!-- Image -->
-                        <img src="./images/menu/top-view-delicious-pakistan-meal-table_23-2148821578.jpg" class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
+                        <img src="./images/veg/bottom-view-roasted-eggplant-salad-bowl-wooden-spoon-different-spices-small-bowls-dark-table_140725-130905.jpg"
+                            class="h-[20vh] md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl  rounded-xl p-2
                                                         transition-transform duration-300
                                                                       group-hover:scale-110" alt="fruits salad">
                         <!-- ↑ Image zoom on hover -->
@@ -285,7 +323,7 @@
                             <h4 class="playfair-display text-xl md:text-3xl font-bold
                            transition-colors duration-300
                            group-hover:text-[#d18610]">
-                                Сasserole
+                                Mix Veg Curry
                             </h4>
                             <!-- ↑ Title color change -->
 
@@ -303,24 +341,23 @@
                             </span>
                             <!-- ↑ Price color change -->
 
-                            <span class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
+                            <button class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
                            transition-transform duration-300
                            group-hover:scale-105">
-                                10% OFF
-                            </span>
+                                <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+                            </button>
                             <!-- ↑ Offer badge zoom -->
                         </div>
                     </div>
-
-                    <!-- Card 4 -->
-                    <div class="group border-2 border-[#c5cacc] rounded-md 
+                    <!-- CARD 4 -->
+                    <div class="drink-card group border-2 border-[#c5cacc] rounded-md 
                              flex flex-col md:flex-row gap-3 items-center p-3
                                 transition-all duration-300 ease-in-out
-                                  hover:-translate-y-2 hover:shadow-xl">
+                                  hover:-translate-y-2 hover:shadow-xl" data-category="veg">
                         <!-- ↑ Card lift + shadow on hover -->
                         <!-- Image -->
-                        <img src="./images/menu/chicken-burger-wooden-board-tomato-lettuce-side-view_141793-2754.jpg"
-                            class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
+                        <img src="./images/veg/front-view-tasty-gutabs-thin-hotcakes-with-meat-inside-desk-dark-surface_179666-44194.avif"
+                            class="h-[20vh] md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl  rounded-xl p-2
                                                         transition-transform duration-300
                                                                       group-hover:scale-110" alt="fruits salad">
                         <!-- ↑ Image zoom on hover -->
@@ -330,7 +367,7 @@
                             <h4 class="playfair-display text-xl md:text-3xl font-bold
                            transition-colors duration-300
                            group-hover:text-[#d18610]">
-                                King Burger
+                                Aloo Paratha
                             </h4>
                             <!-- ↑ Title color change -->
 
@@ -348,24 +385,24 @@
                             </span>
                             <!-- ↑ Price color change -->
 
-                            <span class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
+                            <button class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
                            transition-transform duration-300
                            group-hover:scale-105">
-                                10% OFF
-                            </span>
+                                <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+                            </button>
                             <!-- ↑ Offer badge zoom -->
                         </div>
                     </div>
 
-                    <!-- card 5 -->
-                    <div class="group border-2 border-[#c5cacc] rounded-md 
+
+                    <!-- CARD 5 -->
+                    <div class="drink-card group border-2 border-[#c5cacc] rounded-md 
                              flex flex-col md:flex-row gap-3 items-center p-3
                                 transition-all duration-300 ease-in-out
-                                  hover:-translate-y-2 hover:shadow-xl">
+                                  hover:-translate-y-2 hover:shadow-xl" data-category="veg">
                         <!-- ↑ Card lift + shadow on hover -->
                         <!-- Image -->
-                        <img src="./images/menu/front-view-delicious-fresh-juices-fruits-wooden-tray-brown-background_140725-94504.jpg"
-                            class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
+                        <img src="./images/veg/high-angle-pakistan-meal-composition_23-2148821517.avif" class="h-[20vh] md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
                                                         transition-transform duration-300
                                                                       group-hover:scale-110" alt="fruits salad">
                         <!-- ↑ Image zoom on hover -->
@@ -375,7 +412,7 @@
                             <h4 class="playfair-display text-xl md:text-3xl font-bold
                            transition-colors duration-300
                            group-hover:text-[#d18610]">
-                                Juice
+                                Veg Biryani
                             </h4>
                             <!-- ↑ Title color change -->
 
@@ -389,27 +426,28 @@
                             <span class="text-2xl font-bold josefin-sans text-[#77563f] ml-2
                            transition-colors duration-300
                            group-hover:text-[#d18610]">
-                                <span class="text-[#929c9d]">₹</span>200
+                                <span class="text-[#929c9d]">₹</span>270
                             </span>
                             <!-- ↑ Price color change -->
 
-                            <span class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
+                            <button class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
                            transition-transform duration-300
                            group-hover:scale-105">
-                                10% OFF
-                            </span>
+                                <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+                            </button>
                             <!-- ↑ Offer badge zoom -->
                         </div>
                     </div>
-                    <!-- card 6 -->
-                    <div class="group border-2 border-[#c5cacc] rounded-md 
+
+                    <!-- CARD 6 -->
+                    <div class="drink-card group border-2 border-[#c5cacc] rounded-md 
                              flex flex-col md:flex-row gap-3 items-center p-3
                                 transition-all duration-300 ease-in-out
-                                  hover:-translate-y-2 hover:shadow-xl">
+                                  hover:-translate-y-2 hover:shadow-xl" data-category="veg">
                         <!-- ↑ Card lift + shadow on hover -->
                         <!-- Image -->
-                        <img src="./images/menu/front-view-glass-beer-with-beer-snacks-croutons-chips-sausage-table_141793-17476.jpg"
-                            class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
+                        <img src="./images/veg/white-rice-with-vegetables-black-bowl-wooden-table_123827-31645.avif"
+                            class="h-[20vh] md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
                                                         transition-transform duration-300
                                                                       group-hover:scale-110" alt="fruits salad">
                         <!-- ↑ Image zoom on hover -->
@@ -419,7 +457,7 @@
                             <h4 class="playfair-display text-xl md:text-3xl font-bold
                            transition-colors duration-300
                            group-hover:text-[#d18610]">
-                                Beer
+                                Veg Fried Rice
                             </h4>
                             <!-- ↑ Title color change -->
 
@@ -433,20 +471,385 @@
                             <span class="text-2xl font-bold josefin-sans text-[#77563f] ml-2
                            transition-colors duration-300
                            group-hover:text-[#d18610]">
-                                <span class="text-[#929c9d]">₹</span>200
+                                <span class="text-[#929c9d]">₹</span>270
                             </span>
                             <!-- ↑ Price color change -->
 
-                            <span class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
+                            <button class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
                            transition-transform duration-300
                            group-hover:scale-105">
-                                10% OFF
-                            </span>
+                                <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+                            </button>
+
                             <!-- ↑ Offer badge zoom -->
                         </div>
                     </div>
+
+                    <!-- non-veg section -->
+
+                    <!-- CARD 1  -->
+                    <div class="drink-card group border-2 border-[#c5cacc] rounded-md 
+                             flex flex-col md:flex-row gap-3 items-center p-3
+                                transition-all duration-300 ease-in-out
+                                  hover:-translate-y-2 hover:shadow-xl" data-category="non-veg">
+                        <!-- ↑ Card lift + shadow on hover -->
+                        <!-- Image -->
+                        <img src="./images/non-veg/view-delicious-dish-food_23-2150777655.avif" class="h-[20vh] md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
+                                                        transition-transform duration-300
+                                                                      group-hover:scale-110" alt="fruits salad">
+                        <!-- ↑ Image zoom on hover -->
+
+                        <!-- Content -->
+                        <div class="flex flex-col gap-3 p-2">
+                            <h4 class="playfair-display text-xl md:text-3xl font-bold
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                Chicken Biryani
+                            </h4>
+                            <!-- ↑ Title color change -->
+
+                            <p class="josefin-sans text-[#929c9d] text-lg">
+                                Consectetur adipisicing elit. Soluta, impedit, saepe.
+                            </p>
+                        </div>
+
+                        <!-- Price & Offer -->
+                        <div class="flex flex-row md:flex-col gap-5 justify-between items-center p-2">
+                            <span class="text-2xl font-bold josefin-sans text-[#77563f] ml-2
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                <span class="text-[#929c9d]">₹</span>270
+                            </span>
+                            <!-- ↑ Price color change -->
+
+                            <button class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
+                           transition-transform duration-300
+                           group-hover:scale-105">
+                                <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+                            </button>
+                            <!-- ↑ Offer badge zoom -->
+                        </div>
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="drink-card group border-2 border-[#c5cacc] rounded-md 
+                             flex flex-col md:flex-row gap-3 items-center p-3
+                                transition-all duration-300 ease-in-out
+                                  hover:-translate-y-2 hover:shadow-xl" data-category="non-veg">
+                        <!-- ↑ Card lift + shadow on hover -->
+                        <!-- Image -->
+                        <img src="./images/non-veg/healthy-gourmet-meal-with-chicken-meat-curry-generated-by-ai_188544-18147.avif"
+                            class="h-[20vh] md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
+                                                        transition-transform duration-300
+                                                                      group-hover:scale-110" alt="fruits salad">
+                        <!-- ↑ Image zoom on hover -->
+
+                        <!-- Content -->
+                        <div class="flex flex-col gap-3 p-2">
+                            <h4 class="playfair-display text-xl md:text-3xl font-bold
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                Butter Chicken
+                            </h4>
+                            <!-- ↑ Title color change -->
+
+                            <p class="josefin-sans text-[#929c9d] text-lg">
+                                Consectetur adipisicing elit. Soluta, impedit, saepe.
+                            </p>
+                        </div>
+
+                        <!-- Price & Offer -->
+                        <div class="flex flex-row md:flex-col gap-5 justify-between items-center p-2">
+                            <span class="text-2xl font-bold josefin-sans text-[#77563f] ml-2
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                <span class="text-[#929c9d]">₹</span>270
+                            </span>
+                            <!-- ↑ Price color change -->
+
+                            <button class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
+                           transition-transform duration-300
+                           group-hover:scale-105">
+                                <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+                            </button>
+                            <!-- ↑ Offer badge zoom -->
+                        </div>
+                    </div>
+
+                    <!-- Vegan -->
+                    <!-- cart 1 -->
+                    <div class="drink-card group border-2 border-[#c5cacc] rounded-md 
+                             flex flex-col md:flex-row gap-3 items-center p-3
+                                transition-all duration-300 ease-in-out
+                                  hover:-translate-y-2 hover:shadow-xl" data-category="vegan">
+                        <!-- ↑ Card lift + shadow on hover -->
+                        <!-- Image -->
+                        <img src="./images/vegan/top-view-cooked-rice-inside-pan-with-seasonings-dark-surface-meal-food-rice-eastern-dinner_140725-101595.jpg"
+                            class="h-[20vh] md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
+                                                        transition-transform duration-300
+                                                                      group-hover:scale-110" alt="fruits salad">
+                        <!-- ↑ Image zoom on hover -->
+
+                        <!-- Content -->
+                        <div class="flex flex-col gap-3 p-2">
+                            <h4 class="playfair-display text-xl md:text-3xl font-bold
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                Plane Rice
+                            </h4>
+                            <!-- ↑ Title color change -->
+
+                            <p class="josefin-sans text-[#929c9d] text-lg">
+                                Consectetur adipisicing elit. Soluta, impedit, saepe.
+                            </p>
+                        </div>
+
+                        <!-- Price & Offer -->
+                        <div class="flex flex-row md:flex-col gap-5 justify-between items-center p-2">
+                            <span class="text-2xl font-bold josefin-sans text-[#77563f] ml-2
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                <span class="text-[#929c9d]">₹</span>270
+                            </span>
+                            <!-- ↑ Price color change -->
+
+                            <button class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
+                           transition-transform duration-300
+                           group-hover:scale-105">
+                                <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+                            </button>
+                            <!-- ↑ Offer badge zoom -->
+                        </div>
+                    </div>
+
+                    <!-- cart 2 -->
+                    <div class="drink-card group border-2 border-[#c5cacc] rounded-md 
+                             flex flex-col md:flex-row gap-3 items-center p-3
+                                transition-all duration-300 ease-in-out
+                                  hover:-translate-y-2 hover:shadow-xl" data-category="vegan">
+                        <!-- ↑ Card lift + shadow on hover -->
+                        <!-- Image -->
+                        <img src="./images/vegan/delicious-composition-nutritious-roti_23-2149034032.jpg" class="h-[20vh] md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
+                                                        transition-transform duration-300
+                                                                      group-hover:scale-110" alt="fruits salad">
+                        <!-- ↑ Image zoom on hover -->
+
+                        <!-- Content -->
+                        <div class="flex flex-col gap-3 p-2">
+                            <h4 class="playfair-display text-xl md:text-3xl font-bold
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                Roti
+                            </h4>
+                            <!-- ↑ Title color change -->
+
+                            <p class="josefin-sans text-[#929c9d] text-lg">
+                                Consectetur adipisicing elit. Soluta, impedit, saepe.
+                            </p>
+                        </div>
+
+                        <!-- Price & Offer -->
+                        <div class="flex flex-row md:flex-col gap-5 justify-between items-center p-2">
+                            <span class="text-2xl font-bold josefin-sans text-[#77563f] ml-2
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                <span class="text-[#929c9d]">₹</span>270
+                            </span>
+                            <!-- ↑ Price color change -->
+
+                            <button class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
+                           transition-transform duration-300
+                           group-hover:scale-105">
+                                <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+                            </button>
+                            <!-- ↑ Offer badge zoom -->
+                        </div>
+                    </div>
+
+                    <!-- Beverages -->
+                    <div class="drink-card group border-2 border-[#c5cacc] rounded-md 
+                             flex flex-col md:flex-row gap-3 items-center p-3
+                                transition-all duration-300 ease-in-out
+                                  hover:-translate-y-2 hover:shadow-xl" data-category="beverages">
+                        <!-- ↑ Card lift + shadow on hover -->
+                        <!-- Image -->
+                        <img src="./images/braves/cozy-cup-cinnamon-tea-with-cinnamon-sticks-powder-beside-it_157027-4362.avif"
+                            class="h-[20vh] md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
+                                                        transition-transform duration-300
+                                                                      group-hover:scale-110" alt="fruits salad">
+                        <!-- ↑ Image zoom on hover -->
+
+                        <!-- Content -->
+                        <div class="flex flex-col gap-3 p-2">
+                            <h4 class="playfair-display text-xl md:text-3xl font-bold
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                Tea
+                            </h4>
+                            <!-- ↑ Title color change -->
+
+                            <p class="josefin-sans text-[#929c9d] text-lg">
+                                Consectetur adipisicing elit. Soluta, impedit, saepe.
+                            </p>
+                        </div>
+
+                        <!-- Price & Offer -->
+                        <div class="flex flex-row md:flex-col gap-5 justify-between items-center p-2">
+                            <span class="text-2xl font-bold josefin-sans text-[#77563f] ml-2
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                <span class="text-[#929c9d]">₹</span>270
+                            </span>
+                            <!-- ↑ Price color change -->
+
+                            <button class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
+                           transition-transform duration-300
+                           group-hover:scale-105">
+                                <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+                            </button>
+                            <!-- ↑ Offer badge zoom -->
+                        </div>
+                    </div>
+
+                    <div class="drink-card group border-2 border-[#c5cacc] rounded-md 
+                             flex flex-col md:flex-row gap-3 items-center p-3
+                                transition-all duration-300 ease-in-out
+                                  hover:-translate-y-2 hover:shadow-xl" data-category="beverages">
+                        <!-- ↑ Card lift + shadow on hover -->
+                        <!-- Image -->
+                        <img src="./images/braves/latte-coffee-cup_1203-6548.jpg" class="h-[20vh] md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
+                                                        transition-transform duration-300
+                                                                      group-hover:scale-110" alt="fruits salad">
+                        <!-- ↑ Image zoom on hover -->
+
+                        <!-- Content -->
+                        <div class="flex flex-col gap-3 p-2">
+                            <h4 class="playfair-display text-xl md:text-3xl font-bold
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                Coffee
+                            </h4>
+                            <!-- ↑ Title color change -->
+
+                            <p class="josefin-sans text-[#929c9d] text-lg">
+                                Consectetur adipisicing elit. Soluta, impedit, saepe.
+                            </p>
+                        </div>
+
+                        <!-- Price & Offer -->
+                        <div class="flex flex-row md:flex-col gap-5 justify-between items-center p-2">
+                            <span class="text-2xl font-bold josefin-sans text-[#77563f] ml-2
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                <span class="text-[#929c9d]">₹</span>270
+                            </span>
+                            <!-- ↑ Price color change -->
+
+                            <button class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
+                           transition-transform duration-300
+                           group-hover:scale-105">
+                                <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+                            </button>
+                            <!-- ↑ Offer badge zoom -->
+                        </div>
+                    </div>
+
+                    <!-- desert -->
+                    <div class="drink-card group border-2 border-[#c5cacc] rounded-md 
+                             flex flex-col md:flex-row gap-3 items-center p-3
+                                transition-all duration-300 ease-in-out
+                                  hover:-translate-y-2 hover:shadow-xl" data-category="desserts">
+                        <!-- ↑ Card lift + shadow on hover -->
+                        <!-- Image -->
+                        <img src="./images/desert/delicious-indian-dessert-view_23-2149312365.jpg"
+                            class="h-[20vh] md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
+                                                        transition-transform duration-300
+                                                                      group-hover:scale-110" alt="fruits salad">
+                        <!-- ↑ Image zoom on hover -->
+
+                        <!-- Content -->
+                        <div class="flex flex-col gap-3 p-2">
+                            <h4 class="playfair-display text-xl md:text-3xl font-bold
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                Gulab Jamun
+                            </h4>
+                            <!-- ↑ Title color change -->
+
+                            <p class="josefin-sans text-[#929c9d] text-lg">
+                                Consectetur adipisicing elit. Soluta, impedit, saepe.
+                            </p>
+                        </div>
+
+                        <!-- Price & Offer -->
+                        <div class="flex flex-row md:flex-col gap-5 justify-between items-center p-2">
+                            <span class="text-2xl font-bold josefin-sans text-[#77563f] ml-2
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                <span class="text-[#929c9d]">₹</span>270
+                            </span>
+                            <!-- ↑ Price color change -->
+
+                            <button class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
+                           transition-transform duration-300
+                           group-hover:scale-105">
+                                <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+                            </button>
+                            <!-- ↑ Offer badge zoom -->
+                        </div>
+                    </div>
+
+                    <div class="drink-card group border-2 border-[#c5cacc] rounded-md 
+                             flex flex-col md:flex-row gap-3 items-center p-3
+                                transition-all duration-300 ease-in-out
+                                  hover:-translate-y-2 hover:shadow-xl" data-category="desserts">
+                        <!-- ↑ Card lift + shadow on hover -->
+                        <!-- Image -->
+                        <img src="./images/desert/still-life-sweet-tang-yuan-arrangement_23-2149149074.jpg"
+                            class="h-[20vh] md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
+                                                        transition-transform duration-300
+                                                                      group-hover:scale-110" alt="fruits salad">
+                        <!-- ↑ Image zoom on hover -->
+
+                        <!-- Content -->
+                        <div class="flex flex-col gap-3 p-2">
+                            <h4 class="playfair-display text-xl md:text-3xl font-bold
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                Rasgulla
+                            </h4>
+                            <!-- ↑ Title color change -->
+
+                            <p class="josefin-sans text-[#929c9d] text-lg">
+                                Consectetur adipisicing elit. Soluta, impedit, saepe.
+                            </p>
+                        </div>
+
+                        <!-- Price & Offer -->
+                        <div class="flex flex-row md:flex-col gap-5 justify-between items-center p-2">
+                            <span class="text-2xl font-bold josefin-sans text-[#77563f] ml-2
+                           transition-colors duration-300
+                           group-hover:text-[#d18610]">
+                                <span class="text-[#929c9d]">₹</span>270
+                            </span>
+                            <!-- ↑ Price color change -->
+
+                            <button class="bg-[#d18610] font-semibold px-3 py-2 rounded-md text-white cursor-pointer
+                           transition-transform duration-300
+                           group-hover:scale-105">
+                                <i class="hgi hgi-stroke hgi-shopping-cart-add-02"></i>
+                            </button>
+                            <!-- ↑ Offer badge zoom -->
+                        </div>
+                    </div>
+
                 </div>
+
+
             </div>
+
+            <!--veg non-veg section  -->
+
 
 
             <!-- border  -->
@@ -474,7 +877,7 @@
                                   hover:-translate-y-2 hover:shadow-xl">
                         <!-- ↑ Card lift + shadow on hover -->
                         <!-- Image -->
-                        <img src="./images/menu/top-view-delicious-pakistan-meal-table_23-2148821578.jpg" class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
+                        <img src="./images/menu/top-view-delicious-pakistan-meal-table_23-2148821578.jpg" class="h-[20vh] md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
                                                         transition-transform duration-300
                                                                       group-hover:scale-110" alt="fruits salad">
                         <!-- ↑ Image zoom on hover -->
@@ -519,7 +922,7 @@
                         <!-- ↑ Card lift + shadow on hover -->
                         <!-- Image -->
                         <img src="./images/menu/chicken-burger-wooden-board-tomato-lettuce-side-view_141793-2754.jpg"
-                            class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl  rounded-xl p-2
+                            class="h-[20vh] md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl  rounded-xl p-2
                                                         transition-transform duration-300
                                                                       group-hover:scale-110" alt="fruits salad">
                         <!-- ↑ Image zoom on hover -->
@@ -609,7 +1012,7 @@
                         <!-- ↑ Card lift + shadow on hover -->
                         <!-- Image -->
                         <img src="./images/menu/front-view-glass-beer-with-beer-snacks-croutons-chips-sausage-table_141793-17476.jpg"
-                            class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
+                            class="h-[20vh] md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
                                                         transition-transform duration-300
                                                                       group-hover:scale-110" alt="fruits salad">
                         <!-- ↑ Image zoom on hover -->
@@ -654,7 +1057,7 @@
                         <!-- ↑ Card lift + shadow on hover -->
                         <!-- Image -->
                         <img src="./images/menu/side-view-jug-with-red-wine-grape-dark-horizontal_176474-4227.jpg"
-                            class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl  rounded-xl p-2
+                            class="h-[20vh] md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl  rounded-xl p-2
                                                         transition-transform duration-300
                                                                       group-hover:scale-110" alt="fruits salad">
                         <!-- ↑ Image zoom on hover -->
@@ -699,7 +1102,7 @@
                         <!-- ↑ Card lift + shadow on hover -->
                         <!-- Image -->
                         <img src="./images/menu/ice-cold-whiskey-cocktail-glows-wooden-table-generative-ai_188544-12384.jpg"
-                            class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl  rounded-xl p-2
+                            class="h-[20vh] md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl  rounded-xl p-2
                                                         transition-transform duration-300
                                                                       group-hover:scale-110" alt="fruits salad">
                         <!-- ↑ Image zoom on hover -->
@@ -739,10 +1142,10 @@
                     <div class="drink-card group border-2 border-[#c5cacc] rounded-md 
                              flex flex-col md:flex-row gap-3 items-center p-3
                                 transition-all duration-300 ease-in-out
-                                  hover:-translate-y-2 hover:shadow-xl" data-category="alcoholic" >
+                                  hover:-translate-y-2 hover:shadow-xl" data-category="alcoholic">
                         <!-- ↑ Card lift + shadow on hover -->
                         <!-- Image -->
-                        <img src="./images/menu/vodka-glass-with-oliv-cucumber-red-pepper-slice_114579-3202.jpg" class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl  rounded-xl p-2
+                        <img src="./images/menu/vodka-glass-with-oliv-cucumber-red-pepper-slice_114579-3202.jpg" class="h-[20vh] md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl  rounded-xl p-2
                                                         transition-transform duration-300
                                                                       group-hover:scale-110" alt="fruits salad">
                         <!-- ↑ Image zoom on hover -->
@@ -787,7 +1190,7 @@
                                   hover:-translate-y-2 hover:shadow-xl" data-category="non-alcoholic">
                         <!-- ↑ Card lift + shadow on hover -->
                         <!-- Image -->
-                        <img src="./images/menu/mojito-drink-with-lime-lemon-mint-wood-table_1150-12269.jpg" class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
+                        <img src="./images/menu/mojito-drink-with-lime-lemon-mint-wood-table_1150-12269.jpg" class="h-[20vh] md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
                                                         transition-transform duration-300
                                                                       group-hover:scale-110" alt="fruits salad">
                         <!-- ↑ Image zoom on hover -->
@@ -831,7 +1234,7 @@
                                   hover:-translate-y-2 hover:shadow-xl" data-category="non-alcoholic">
                         <!-- ↑ Card lift + shadow on hover -->
                         <!-- Image -->
-                        <img src="./images/menu/iced-coffee-with-chocolate-syrup_1150-18528.avif" class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
+                        <img src="./images/menu/iced-coffee-with-chocolate-syrup_1150-18528.avif" class="h-[20vh] md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
                                                         transition-transform duration-300
                                                                       group-hover:scale-110" alt="fruits salad">
                         <!-- ↑ Image zoom on hover -->
@@ -877,7 +1280,7 @@
                                   hover:-translate-y-2 hover:shadow-xl" data-category="hot">
                         <!-- ↑ Card lift + shadow on hover -->
                         <!-- Image -->
-                        <img src="./images/menu/high-angle-delicious-indian-drink_23-2149312361.jpg" class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
+                        <img src="./images/menu/high-angle-delicious-indian-drink_23-2149312361.jpg" class="h-[20vh] md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
                                                         transition-transform duration-300
                                                                       group-hover:scale-110" alt="fruits salad">
                         <!-- ↑ Image zoom on hover -->
@@ -921,7 +1324,7 @@
                                   hover:-translate-y-2 hover:shadow-xl" data-category="hot">
                         <!-- ↑ Card lift + shadow on hover -->
                         <!-- Image -->
-                        <img src="./images/menu/mug-retro-healthy-eating-straw-drink_1172-462.jpg" class="h-full md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
+                        <img src="./images/menu/mug-retro-healthy-eating-straw-drink_1172-462.jpg" class="h-[20vh] md:h-[20vh] w-full md:w-[10vw] object-cover rounded-xl rounded-md p-2
                                                         transition-transform duration-300
                                                                       group-hover:scale-110" alt="fruits salad">
                         <!-- ↑ Image zoom on hover -->
@@ -1032,8 +1435,88 @@
             </div>
 
         </div>
-
     </div>
+
+    <!-- footer section -->
+    <footer class="relative w-full">
+
+        <!-- BACKGROUND IMAGE -->
+        <img src="./images/footer/grunge-black-concrete-textured-background_53876-124541.avif"
+            class="w-full h-full object-cover absolute inset-0" alt="footer-bg">
+
+        <!-- BLACK SHADE -->
+        <div class="absolute inset-0 bg-black/50 h-full"></div>
+
+        <!-- CONTENT -->
+        <div class="relative max-w-[85%] mx-auto pt-10">
+
+            <div class="flex justify-between items-center text-white flex-col md:flex-row gap-3">
+                <h4 class="text-3xl font-bold playfair-display text-[#c2c7c8]">RestroHub</h4>
+
+                <div class="flex items-center gap-5 text-xl md:text-2xl">
+                    <i class="hgi hgi-stroke hgi-facebook-02 hover:text-[#f39c12] cursor-pointer"></i>
+                    <i class="hgi hgi-stroke hgi-instagram hover:text-[#f39c12] cursor-pointer"></i>
+                    <i class="hgi hgi-stroke hgi-new-twitter hover:text-[#f39c12] cursor-pointer"></i>
+                    <i class="hgi hgi-stroke hgi-youtube hover:text-[#f39c12] cursor-pointer"></i>
+                </div>
+            </div>
+
+            <!-- border -->
+            <div class="border-b-4 border-dotted border-[#c5cacc] mt-3 md:mt-[8vh]"></div>
+
+
+            <div class="flex flex-col md:flex-row justify-between items-center w-full mt-3 gap-3">
+                <div class=" w-full md:w-[25%] flex flex-col items-start gap-3">
+                    <h4 class="text-lg md:text-2xl playfair-display text-[#f2f6f7] font-bold">About us</h4>
+                    <span class="text-[#798587] josefin-sans">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Laborum
+                        beatae minima id, repellat
+                        delectus distinctio reprehenderit quibusdam dolores quos cupiditate?</span>
+                </div>
+                <div class="w-full md:w-[25%] flex flex-col items-start gap-3">
+                    <h4 class="text-lg md:text-2xl playfair-display text-[#f2f6f7] font-bold">Contact Info</h4>
+                    <div class="flex justify-between items-center w-full">
+                        <div class="flex flex-col gap-2 items-start text-[#b9c1c3] uppercase josefin-sans">
+                            <span>Call:</span>
+                            <span>Email:</span>
+                            <span>City:</span>
+                        </div>
+                        <div class="flex flex-col gap-3 items-end josefin-sans">
+                            <span class="text-[#798587]">+1234567890</span>
+                            <span class="text-[#798587]">1dIbO@example.com</span>
+                            <span class="text-[#798587]">Kolkata, India</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-[25%] flex flex-col items-start gap-3">
+                    <h4 class="text-lg md:text-2xl playfair-display text-[#f2f6f7] font-bold">Quick Links</h4>
+                    <div class="flex flex-col gap-1 josefin-sans">
+                        <span class="text-[#798587]">
+                            <a href="#">Home</a>
+                        </span>
+                        <span class="text-[#798587]">
+                            <a href="#">Menu</a>
+                        </span>
+                        <span class="text-[#798587]">
+                            <a href="#">Service</a>
+                        </span>
+                        <span class="text-[#798587]">
+                            <a href="#">Contact</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-b-4 border-dotted border-[#c5cacc] mt-3 md:mt-[8vh]"></div>
+
+            <div class="py-5 josefin-sans text-md text-center">
+                <span class="text-[#828d90]">© RestroHub 2025. All rights reserved. Design by <span
+                        class="text-[#ed9912]"><a href="#">LogicRaft Team</a></span></span>
+            </div>
+
+        </div>
+
+    </footer>
 
     <!-- script section -->
     <script>
@@ -1089,6 +1572,32 @@
             });
         });
     </script>
+
+    <script>
+        const filterButton = document.querySelectorAll(".filter-btn");
+        const cards = document.querySelectorAll(".drink-card");
+
+        filterButton.forEach(btn => {
+            btn.addEventListener("click", () => {
+                // active button style
+                filterButton.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+
+                const filter = btn.getAttribute("data-filter");
+
+                cards.forEach(card => {
+                    const category = card.getAttribute("data-category");
+
+                    if (filter === "all" || category === filter) {
+                        card.style.display = "flex";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            });
+        });
+    </script>
+
 
 
 </body>

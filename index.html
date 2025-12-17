@@ -71,22 +71,40 @@
 <body>
     <header class="relative">
         <!-- Navbar -->
-        <nav
-            class="max-w-[95%] mx-auto flex items-center justify-between josefin-sans bg-white/90 backdrop-blur-md px-2 py-2 md:px-3 md:py-5 rounded-md shadow-md absolute top-4 left-1/2 transform -translate-x-1/2 z-50 w-[90%]">
-            <h4 class="text-xl md:text-3xl font-bold text-[#1b2047]">RestroHub</h4>
+        <nav id="navbar" class="max-w-[95%] mx-auto flex items-center justify-between
+                                josefin-sans bg-white/90 backdrop-blur-md
+                                        px-2 py-2 md:px-3 md:py-5
+                                        rounded-md shadow-md
+                                absolute top-4 left-1/2 -translate-x-1/2
+                                z-50 w-[90%] transition-all duration-300">
+
+            <div class="flex items-center gap-1">
+                <img src="./images/logo/WhatsApp-Image-2025-12-16-at-8.20.34-PM.svg"
+                    class="h-[8vh] w-[8vw] rounded-full" alt="">
+                <h4 class="text-xl md:text-3xl font-bold text-[#1b2047]">Soya Chaap Adda</h4>
+            </div>
             <!-- Desktop Menu -->
             <div class="flex gap-4 items-center hidden md:flex">
                 <ul class="flex gap-3 items-center text-lg font-semibold">
                     <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Home</a></li>
                     <li><a href="./about.html" class="text-[#1b2047] hover:text-[#fe7f32]">About Us</a></li>
                     <li><a href="./menu.html" class="text-[#1b2047] hover:text-[#fe7f32]">Menu</a></li>
-                    <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Gallary</a></li>
-                    <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Contact</a></li>
+                    <li><a href="./booktable.html" class="text-[#1b2047] hover:text-[#fe7f32]">Order</a></li>
+                    <li><a href="./contact.html" class="text-[#1b2047] hover:text-[#fe7f32]">Contact</a></li>
                 </ul>
-
                 <button class="bg-[#fe7f32] px-4 py-2 text-white rounded">
-                    <a href="./booktable.html">Book a table</a>
+                    <a href="./booktable.html">Register</a>
                 </button>
+                <button class="bg-[#fe7f32] px-4 py-2 text-white rounded">
+                    <a href="./booktable.html">Profile</a>
+                </button>
+
+                <div class="relative">
+                    <i class="hgi hgi-stroke hgi-shopping-basket-secure-01 text-2xl font-bold cursor-pointer w-[20vw]"></i>
+                    <span class="absolute bg-[#2ecc71] px-1 py-1 rounded-full right-[-6px] top-[-13px]">0</span>
+                </div>
+
+
             </div>
 
             <!-- Mobile Menu Button -->
@@ -115,14 +133,19 @@
                 <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Home</a></li>
                 <li><a href="./about.html" class="text-[#1b2047] hover:text-[#fe7f32]">About Us</a></li>
                 <li><a href="./menu.html" class="text-[#1b2047] hover:text-[#fe7f32]">Menu</a></li>
-                <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Gallery</a></li>
-                <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Contact</a></li>
+                <li><a href="./booktable.html" class="text-[#1b2047] hover:text-[#fe7f32]">Order</a></li>
+                <li><a href="./contact.html" class="text-[#1b2047] hover:text-[#fe7f32]">Contact</a></li>
             </ul>
 
             <!-- Fixed Book Button -->
-            <div class="px-6 pb-6">
-                <a href="./booktable.html" class="block text-center bg-[#fe7f32] px-4 py-3 text-white rounded-lg font-semibold">
-                    Book a Table
+            <div class="px-6 pb-6 flex flex-col gap-2">
+                <a href="./booktable.html"
+                    class="block text-center bg-[#fe7f32] px-4 py-3 text-white rounded-lg font-semibold">
+                    Register
+                </a>
+                <a href="./booktable.html"
+                    class="block text-center bg-[#fe7f32] px-4 py-3 text-white rounded-lg font-semibold">
+                    Profile
                 </a>
             </div>
         </div>
@@ -274,6 +297,7 @@
                     <span class="text-[#b9bfc0] josefin-sans">Porro eveniet, autem ipsam!</span>
                 </div>
 
+
                 <!-- Services -->
                 <div class="flex flex-col md:flex-row justify-between items-center gap-3 mt-8 ">
                     <div class="border-2 border-[#c5cacc] rounded-md flex flex-col gap-3 items-center p-4 ">
@@ -302,39 +326,111 @@
 
                 <div class="border-b-4 border-dotted border-[#c5cacc]"></div>
 
+                <!-- Partner Section -->
+                <div class="text-center flex flex-col items-center gap-3">
+                    <span class="text-xl font-bold uppercase">Our Partner</span>
+                    <h4 class="playfair-display text-3xl md:text-5xl font-extrabold">
+                        Authorized IRCTC e-Catering Partner
+                    </h4>
+                    <span class="text-[#b9bfc0] josefin-sans">
+                        Trusted food delivery on Indian Railways
+                    </span>
+                </div>
+
+                <!-- Partner Features -->
+                <div class="flex flex-col md:flex-row justify-between items-center gap-3 mt-8">
+
+                    <!-- Feature 1 -->
+                    <div class="border-2 border-[#c5cacc] rounded-md flex flex-col gap-3 items-center p-4 text-center">
+                        <img src="./images/partner/irctc.png" class="h-[20vh] md:h-[30vh] w-full object-cover" alt="IRCTC Authorized">
+                        <h4 class="text-lg md:text-3xl font-bold playfair-display">
+                            IRCTC Authorized
+                        </h4>
+                        <span class="text-[#c5cacc] josefin-sans">
+                            Officially approved IRCTC e-Catering partner ensuring safe & reliable service
+                        </span>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="border-2 border-[#c5cacc] rounded-md flex flex-col gap-3 items-center p-4 text-center">
+                        <img src="./images/partner/delivery-man-holding-brown-cardboard-box-package-smiling-face_1197144-2087.jpg" class="rounded-xl h-[25vh] md:h-[30vh] w-full object-cover"
+                            alt="Train Delivery">
+                        <h4 class="text-lg md:text-3xl font-bold playfair-display">
+                            On-Time Train Delivery
+                        </h4>
+                        <span class="text-[#c5cacc] josefin-sans">
+                            Fresh meals delivered directly to your seat at selected railway stations
+                        </span>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="border-2 border-[#c5cacc] rounded-md flex flex-col gap-3 items-center p-4 text-center">
+                        <img src="./images/partner/standard-quality-control-concept-m_23-2150041862.avif" class="rounded-xl h-[25vh] md:h-[30vh] w-full object-cover" alt="Hygiene Assured">
+                        <h4 class="text-lg md:text-3xl font-bold playfair-display">
+                            Hygiene Assured
+                        </h4>
+                        <span class="text-[#c5cacc] josefin-sans">
+                            Prepared in FSSAI-certified kitchens with strict quality standards
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="border-b-4 border-dotted border-[#c5cacc]"></div>
+
                 <!-- Our Services -->
                 <div class="text-center mt-4 flex flex-col gap-2">
                     <span class="text-xl font-bold uppercase">Our Services</span>
                     <h4 class="playfair-display text-3xl md:text-5xl font-extrabold">Why We are the best</h4>
 
-                    <div class="flex flex-col md:flex-row justify-between gap-4 items-center mt-5">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-5">
                         <div class="border-2 border-[#daddde] p-4 flex flex-col gap-3 items-center md:items-start">
-                            <img src="./images/serviceImg/delicious-pizza-indoors_23-2150873874.avif" class="rounded-md"
-                                alt="">
-                            <h4 class="text-lg md:text-3xl font-bold playfair-display">Prickly Pear Tonic</h4>
+                            <img src="./images/serviceImg/woman-with-medical-mask-using-tablet-while-traveling-with-public-train_23-2149042917.avif"
+                                class="rounded-md  h-[35vh] w-full object-cover" alt="" ">
+                            <h4 class=" text-lg md:text-3xl font-bold playfair-display"> Order Food During Your Rail
+                            Journey</h4>
                             <p class="text-[#c5cacc] josefin-sans">Lorem Ipsum is simply dummy text of the printing and
                                 typesetting industry. Lorem Ipsum dummy text</p>
-                            <button class="bg-[#f39c12] px-3 py-2 rounded-md text-white uppercase josefin-sans">
+                            <button
+                                class="bg-[#f39c12] px-2 md:px-3 py-1 md:py-2 text-sm md:text-md rounded-md text-white uppercase josefin-sans">
+                                <a href="#" cla>Read More</a>
+                            </button>
+                        </div>
+                        <div class="border-2 border-[#daddde] p-4 flex flex-col gap-3 items-center md:items-start">
+                            <img src="./images/serviceImg/friends-holding-sparklers-new-year-s-eve-party_23-2148724183.jpg"
+                                class="rounded-md  h-[35vh] w-full object-cover" alt="">
+                            <h4 class="text-lg md:text-3xl font-bold playfair-display">Corporate Party Event Food
+                                Catering</h4>
+                            <p class="text-[#c5cacc] josefin-sans">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum dummy text</p>
+                            <button
+                                class="bg-[#f39c12] px-2 md:px-3 py-1 md:py-2 text-sm md:text-md rounded-md text-white uppercase josefin-sans">
                                 <a href="#">Read More</a>
                             </button>
                         </div>
                         <div class="border-2 border-[#daddde] p-4 flex flex-col gap-3 items-center md:items-start">
-                            <img src="./images/serviceImg/crispy-chicken-burger_23-2151950828.avif" class="rounded-md"
-                                alt="">
-                            <h4 class="text-lg md:text-3xl font-bold playfair-display">Fresh Oysters Dozen</h4>
+                            <img src="./images/serviceImg/birthday-vector-banner-template-happy-birthday-you-with-cakes-gifts-balloon-decoration-element-birth-day-celebration-greeting-design-vector-illustration_1279686-2606.avif"
+                                class="rounded-md h-[35vh] w-full object-cover" alt="">
+                            <h4 class="text-lg md:text-3xl font-bold playfair-display">Birthday Party Event Food
+                                Catering</h4>
                             <p class="text-[#c5cacc] josefin-sans">Lorem Ipsum is simply dummy text of the printing and
                                 typesetting industry. Lorem Ipsum dummy text</p>
-                            <button class="bg-[#f39c12] px-3 py-2 rounded-md text-white uppercase josefin-sans">
+                            <button
+                                class="bg-[#f39c12] px-2 md:px-3 py-1 md:py-2 text-sm md:text-md  rounded-md text-white uppercase josefin-sans">
                                 <a href="#">Read More</a>
+
                             </button>
                         </div>
                         <div class="border-2 border-[#daddde] p-4 flex flex-col gap-3 items-center md:items-start">
-                            <img src="./images/serviceImg/steaming-cup-chai-tea-with-star-anise-cinnamon-sticks-cloves-black-surface_9975-124486.avif"
-                                class="rounded-md" alt="">
-                            <h4 class="text-lg md:text-3xl font-bold playfair-display">Purple Corn Tosta</h4>
+                            <img src="./images/serviceImg/new-year-party-friendship-concept-with-friends-sparklers_23-2147720556.jpg"
+                                class="rounded-md h-[35vh] object-cover" alt="">
+                            <h4 class="text-lg md:text-3xl font-bold playfair-display">Anniversary Party Event Food
+                                Catering</h4>
                             <p class="text-[#c5cacc] josefin-sans">Lorem Ipsum is simply dummy text of the printing and
                                 typesetting industry. Lorem Ipsum dummy text</p>
-                            <button class="bg-[#f39c12] px-3 py-2 rounded-md text-white uppercase josefin-sans">
+                            <button
+                                class="bg-[#f39c12] px-2 md:px-3 py-1 md:py-2 text-sm md:text-md  rounded-md text-white uppercase josefin-sans">
                                 <a href="#">Read More</a>
 
                             </button>
@@ -636,6 +732,35 @@
         overlay.addEventListener("click", closeMobileMenu);
 
     </script>
+    <!-- nav fixed script -->
+    <script>
+        const navbar = document.getElementById("navbar");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 100) {
+                navbar.classList.remove("absolute", "top-4");
+                navbar.classList.add(
+                    "fixed",
+                    "top-0",
+                    "left-1/2",
+                    "-translate-x-1/2",
+                    "rounded-md",
+                    "w-full",
+                    "shadow-lg"
+                );
+            } else {
+                navbar.classList.remove(
+                    "fixed",
+                    "top-0",
+                    "rounded-none",
+                    "w-full",
+                    "shadow-lg"
+                );
+                navbar.classList.add("absolute", "top-4");
+            }
+        });
+    </script>
+
 
 </body>
 
