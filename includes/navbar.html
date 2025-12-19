@@ -32,12 +32,42 @@
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="#">Shop</a></li>
-            </ul>
+                <li class="relative group">
+                    <a href="#" class="flex items-center gap-1">
+                        Shop
+                        <span class="text-sm">▼</span>
+                    </a>
 
-            <a href="booktable.html" class="bg-[#fe7f32] px-4 py-2 text-white rounded josefin-sans">
-                Register
-            </a>
+                    <!-- Dropdown -->
+                    <ul class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-md
+                            opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                                    transition-all duration-300 z-50 bg-[#f39c12]">
+
+                        <li class="josefin-sans">
+                            <a href="cart.html" class="block px-4 py-2 hover:bg-gray-100">
+                                🛒 Cart
+                            </a>
+                        </li>
+
+                        <li class="josefin-sans">
+                            <a href="checkout.html" class="block px-4 py-2 hover:bg-gray-100">
+                                💳 Checkout
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+            <div class="flex items-center gap-4">
+                <a href="booktable.html" class="bg-[#fe7f32] px-4 py-2 text-white rounded josefin-sans">
+                    Register
+                </a>
+                <button>
+                    <a href="../cart.html">
+                        <i class="hgi hgi-stroke hgi-shopping-basket-01 text-2xl "></i>
+                    </a>
+                </button>
+            </div>
         </div>
 
         <!-- Mobile Button -->
@@ -46,7 +76,7 @@
         </button>
     </nav>
 
-    <!-- mobile menu -->
+    <!-- mobile menu start -->
     <!-- Overlay -->
     <div id="overlay" class="hidden fixed inset-0 bg-black/50 z-[900]"></div>
 
@@ -79,19 +109,22 @@
         const closeMenu = document.getElementById("closeMenu");
         const overlay = document.getElementById("overlay");
 
+        // OPEN MENU
         menuBtn.addEventListener("click", () => {
             overlay.classList.remove("hidden");
-            mobileMenu.classList.remove("hidden");
 
+            mobileMenu.classList.remove("hidden");
             setTimeout(() => {
-                mobileMenu.classList.remove("-translate-y-full", "opacity-0");
+                mobileMenu.classList.remove("translate-y-[-100%]", "opacity-0");
                 mobileMenu.classList.add("translate-y-0", "opacity-100");
             }, 10);
         });
 
+        // CLOSE MENU
         function closeMobileMenu() {
-            mobileMenu.classList.add("-translate-y-full", "opacity-0");
+            mobileMenu.classList.add("translate-y-[-100%]", "opacity-0");
             mobileMenu.classList.remove("translate-y-0", "opacity-100");
+
             overlay.classList.add("hidden");
 
             setTimeout(() => {
@@ -100,11 +133,7 @@
         }
 
         closeMenu.addEventListener("click", closeMobileMenu);
-        overlay.addEventListener("click", closeMobileMenu);
-
-        document.querySelectorAll("#mobileMenu a").forEach(link => {
-            link.addEventListener("click", closeMobileMenu);
-        });
+        overlay.addEventListener("click", closeMobileMenu)
     </script>
 
 </body>

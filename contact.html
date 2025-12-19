@@ -336,6 +336,7 @@
 
     </footer>
 
+    <!-- navbar script -->
     <script>
         const menuBtn = document.getElementById("menuBtn");
         const mobileMenu = document.getElementById("mobileMenu");
@@ -368,7 +369,8 @@
         closeMenu.addEventListener("click", closeMobileMenu);
         overlay.addEventListener("click", closeMobileMenu)
     </script>
-    <!-- navbar script -->
+
+    <!-- navbar include script -->
     <script>
         fetch("includes/navbar.html")
             .then(res => res.text())
