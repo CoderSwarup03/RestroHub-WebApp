@@ -73,25 +73,7 @@
         <!-- Navbar -->
         <div id="navbar"></div>
 
-        <script src="./includes/main.js"></script>
 
-        <script>
-            fetch("./includes/navbar.html")
-                .then(res => res.text())
-                .then(html => {
-                    document.getElementById("navbar").innerHTML = html;
-
-                    // ✅ SAFE CALL
-                    if (typeof initMobileMenu === "function") {
-                        initMobileMenu();
-                    } else {
-                        console.error("initMobileMenu not found");
-                    }
-                });
-        </script>
-
-        <!-- Mobile Menu -->
-        <!-- Overlay background -->
 
 
         <!-- Slider Wrapper -->
@@ -643,71 +625,26 @@
 
         showSlide(0);
 
-
-        // navbarMenu
-        // const menuBtn = document.getElementById("menuBtn");
-        // const mobileMenu = document.getElementById("mobileMenu");
-        // const closeMenu = document.getElementById("closeMenu");
-        // const overlay = document.getElementById("overlay");
-
-        // OPEN MENU
-        // menuBtn.addEventListener("click", () => {
-        //     overlay.classList.remove("hidden");
-
-        //     mobileMenu.classList.remove("hidden");
-        //     setTimeout(() => {
-        //         mobileMenu.classList.remove("translate-y-[-100%]", "opacity-0");
-        //         mobileMenu.classList.add("translate-y-0", "opacity-100");
-        //     }, 10);
-        // });
-
-        // CLOSE MENU
-        // function closeMobileMenu() {
-        //     mobileMenu.classList.add("translate-y-[-100%]", "opacity-0");
-        //     mobileMenu.classList.remove("translate-y-0", "opacity-100");
-
-        //     overlay.classList.add("hidden");
-
-        //     setTimeout(() => {
-        //         mobileMenu.classList.add("hidden");
-        //     }, 300);
-        // }
-
-        // closeMenu.addEventListener("click", closeMobileMenu);
-        // overlay.addEventListener("click", closeMobileMenu);
-
     </script>
-    <!-- nav fixed script -->
-    <!-- <script>
-        
-        const navbar = document.getElementById("navbar");
 
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 100) {
-                navbar.classList.remove("absolute", "top-4");
-                navbar.classList.add(
-                    "fixed",
-                    "top-0",
-                    "left-1/2",
-                    "-translate-x-1/2",
-                    "rounded-md",
-                    "w-full",
-                    "shadow-lg"
-                );
-            } else {
-                navbar.classList.remove(
-                    "fixed",
-                    "top-0",
-                    "rounded-none",
-                    "w-full",
-                    "shadow-lg"
-                );
-                navbar.classList.add("absolute", "top-4");
-            }
-        });
-    </script> -->
+
     <!-- navbar script -->
+    <script src="./includes/main.js"></script>
 
+    <script>
+        fetch("./includes/navbar.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("navbar").innerHTML = html;
+
+                // ✅ SAFE CALL
+                if (typeof initMobileMenu === "function") {
+                    initMobileMenu();
+                } else {
+                    console.error("initMobileMenu not found");
+                }
+            });
+    </script>
 
 </body>
 

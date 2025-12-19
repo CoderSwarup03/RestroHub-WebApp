@@ -1569,25 +1569,24 @@
             });
         });
     </script>
+    
+    <script src="./includes/main.js"></script>
 
-    <!-- navbar script -->
     <script>
-        fetch("includes/navbar.html")
+        fetch("./includes/navbar.html")
             .then(res => res.text())
             .then(html => {
                 document.getElementById("navbar").innerHTML = html;
-                setActiveMenu();
-            });
 
-        function setActiveMenu() {
-            const page = location.pathname.split("/").pop().replace(".html", "") || "index";
-            document.querySelectorAll('[data-page]').forEach(link => {
-                if (link.dataset.page === page) {
-                    link.classList.add("text-[#fe7f32]");
+                // ✅ SAFE CALL
+                if (typeof initMobileMenu === "function") {
+                    initMobileMenu();
+                } else {
+                    console.error("initMobileMenu not found");
                 }
             });
-        }
     </script>
+
 
 </body>
 
