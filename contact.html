@@ -81,33 +81,22 @@
             <!-- Navbar -->
             <div id="navbar"></div>
 
-            <!-- Mobile Menu -->
-            <div id="overlay" class="hidden fixed inset-0 bg-black/50 z-[900]"></div>
+            <script src="./includes/main.js"></script>
 
-            <div id="mobileMenu" class="hidden md:hidden fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md shadow-lg z-[999] 
-           translate-y-[-100%] opacity-0 transition-all duration-300">
+            <script>
+                fetch("./includes/navbar.html")
+                    .then(res => res.text())
+                    .then(html => {
+                        document.getElementById("navbar").innerHTML = html;
 
-                <!-- Close Button -->
-                <div class="flex justify-end pr-4 pt-4">
-                    <i id="closeMenu" class="hgi hgi-stroke hgi-cancel-square text-3xl text-[#21264c]"></i>
-                </div>
-
-                <!-- Menu Items -->
-                <ul class="flex flex-col gap-4 px-6 py-4 text-lg font-semibold">
-                    <li><a href="./index.html" class="text-[#1b2047] hover:text-[#fe7f32]">Home</a></li>
-                    <li><a href="./about.html" class="text-[#1b2047] hover:text-[#fe7f32]">About Us</a></li>
-                    <li><a href="./menu.html" class="text-[#1b2047] hover:text-[#fe7f32]">Menu</a></li>
-                    <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Gallery</a></li>
-                    <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Contact</a></li>
-                </ul>
-
-                <!-- Fixed Book Button -->
-                <div class="px-6 pb-6">
-                    <a href="#" class="block text-center bg-[#fe7f32] px-4 py-3 text-white rounded-lg font-semibold">
-                        Book a Table
-                    </a>
-                </div>
-            </div>
+                        // ✅ SAFE CALL
+                        if (typeof initMobileMenu === "function") {
+                            initMobileMenu();
+                        } else {
+                            console.error("initMobileMenu not found");
+                        }
+                    });
+            </script>
 
             <!-- Text Content -->
             <div class="absolute top-[20%] md:top-[28%] left-[15%] md:left-[25%] flex flex-col gap-5 items-start z-20">
@@ -336,58 +325,7 @@
 
     </footer>
 
-    <!-- navbar script -->
-    <script>
-        const menuBtn = document.getElementById("menuBtn");
-        const mobileMenu = document.getElementById("mobileMenu");
-        const closeMenu = document.getElementById("closeMenu");
-        const overlay = document.getElementById("overlay");
 
-        // OPEN MENU
-        menuBtn.addEventListener("click", () => {
-            overlay.classList.remove("hidden");
-
-            mobileMenu.classList.remove("hidden");
-            setTimeout(() => {
-                mobileMenu.classList.remove("translate-y-[-100%]", "opacity-0");
-                mobileMenu.classList.add("translate-y-0", "opacity-100");
-            }, 10);
-        });
-
-        // CLOSE MENU
-        function closeMobileMenu() {
-            mobileMenu.classList.add("translate-y-[-100%]", "opacity-0");
-            mobileMenu.classList.remove("translate-y-0", "opacity-100");
-
-            overlay.classList.add("hidden");
-
-            setTimeout(() => {
-                mobileMenu.classList.add("hidden");
-            }, 300);
-        }
-
-        closeMenu.addEventListener("click", closeMobileMenu);
-        overlay.addEventListener("click", closeMobileMenu)
-    </script>
-
-    <!-- navbar include script -->
-    <script>
-        fetch("includes/navbar.html")
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById("navbar").innerHTML = html;
-                setActiveMenu();
-            });
-
-        function setActiveMenu() {
-            const page = location.pathname.split("/").pop().replace(".html", "") || "index";
-            document.querySelectorAll('[data-page]').forEach(link => {
-                if (link.dataset.page === page) {
-                    link.classList.add("text-[#fe7f32]");
-                }
-            });
-        }
-    </script>
 </body>
 
 </html>

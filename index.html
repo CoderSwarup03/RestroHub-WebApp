@@ -73,6 +73,23 @@
         <!-- Navbar -->
         <div id="navbar"></div>
 
+        <script src="./includes/main.js"></script>
+
+        <script>
+            fetch("./includes/navbar.html")
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById("navbar").innerHTML = html;
+
+                    // ✅ SAFE CALL
+                    if (typeof initMobileMenu === "function") {
+                        initMobileMenu();
+                    } else {
+                        console.error("initMobileMenu not found");
+                    }
+                });
+        </script>
+
         <!-- Mobile Menu -->
         <!-- Overlay background -->
 
@@ -690,23 +707,6 @@
         });
     </script> -->
     <!-- navbar script -->
-    <script>
-        fetch("includes/navbar.html")
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById("navbar").innerHTML = html;
-                setActiveMenu();
-            });
-
-        function setActiveMenu() {
-            const page = location.pathname.split("/").pop().replace(".html", "") || "index";
-            document.querySelectorAll('[data-page]').forEach(link => {
-                if (link.dataset.page === page) {
-                    link.classList.add("text-[#fe7f32]");
-                }
-            });
-        }
-    </script>
 
 
 </body>

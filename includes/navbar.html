@@ -1,141 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soya Chaap Adda</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-
-<body>
-
-    <nav class="max-w-[95%] mx-auto flex items-center justify-between
+<nav class="max-w-[95%] mx-auto flex items-center justify-between
     bg-white/90 backdrop-blur-md
     px-2 py-2 md:px-3 md:py-5
     rounded-md shadow-md
     fixed top-4 left-0 right-0
     z-[1000] w-[90%] transition-all duration-300">
 
-        <div class="flex items-center gap-1">
-            <img src="../images/logo/ss.png" class="h-[8vh] w-[15vw] md:w-[5vw] rounded-full object-cover">
-            <h4 class="hidden md:block text-xl md:text-3xl font-bold text-[#1b2047]">
-                Soya Chaap Adda
-            </h4>
-        </div>
+    <div class="flex items-center gap-1">
+        <img src="../images/logo/ss.png" class="h-[8vh] w-[15vw] md:w-[5vw] rounded-full object-cover">
+        <h4 class="hidden md:block text-xl md:text-3xl font-bold text-[#1b2047]">
+            Soya Chaap Adda
+        </h4>
+    </div>
 
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex gap-4 items-center">
-            <ul class="flex gap-3 items-center text-lg font-semibold josefin-sans">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li class="relative group">
-                    <a href="#" class="flex items-center gap-1">
-                        Shop
-                        <span class="text-sm">▼</span>
-                    </a>
-
-                    <!-- Dropdown -->
-                    <ul class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-md
-                            opacity-0 invisible group-hover:opacity-100 group-hover:visible
-                                    transition-all duration-300 z-50 bg-[#f39c12]">
-
-                        <li class="josefin-sans">
-                            <a href="cart.html" class="block px-4 py-2 hover:bg-gray-100">
-                                🛒 Cart
-                            </a>
-                        </li>
-
-                        <li class="josefin-sans">
-                            <a href="checkout.html" class="block px-4 py-2 hover:bg-gray-100">
-                                💳 Checkout
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-            </ul>
-            <div class="flex items-center gap-4">
-                <a href="booktable.html" class="bg-[#fe7f32] px-4 py-2 text-white rounded josefin-sans">
-                    Register
-                </a>
-                <button>
-                    <a href="../cart.html">
-                        <i class="hgi hgi-stroke hgi-shopping-basket-01 text-2xl "></i>
-                    </a>
-                </button>
-            </div>
-        </div>
-
-        <!-- Mobile Button -->
-        <button id="menuBtn" class="md:hidden text-2xl z-[1100]">
-            ☰
-        </button>
-    </nav>
-
-    <!-- mobile menu start -->
-    <!-- Overlay -->
-    <div id="overlay" class="hidden fixed inset-0 bg-black/50 z-[900]"></div>
-
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="hidden fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md
-    shadow-lg z-[999] -translate-y-full opacity-0 transition-all duration-300">
-
-        <div class="flex justify-end pr-4 pt-4">
-            <button id="closeMenu" class="text-3xl">✖</button>
-        </div>
-
-        <ul class="flex flex-col gap-4 px-6 py-4 text-lg font-semibold">
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex gap-4 items-center">
+        <ul class="flex gap-3 items-center text-lg font-semibold josefin-sans">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="menu.html">Menu</a></li>
-            <li><a href="booktable.html">Order</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact</a></li>
-        </ul>
+            <li class="relative group">
+                <a href="#" class="flex items-center gap-1">
+                    Shop
+                    <span class="text-sm">▼</span>
+                </a>
 
-        <div class="px-6 pb-6 flex flex-col gap-2">
-            <a href="booktable.html" class="block text-center bg-[#fe7f32] px-4 py-3 text-white rounded-lg">
+                <!-- Dropdown -->
+                <ul class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-md
+                            opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                                    transition-all duration-300 z-50 bg-[#f39c12]">
+
+                    <li class="josefin-sans">
+                        <a href="cart.html" class="block px-4 py-2 hover:bg-gray-100">
+                            🛒 Cart
+                        </a>
+                    </li>
+
+                    <li class="josefin-sans">
+                        <a href="checkout.html" class="block px-4 py-2 hover:bg-gray-100">
+                            💳 Checkout
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="flex items-center gap-4">
+            <a href="booktable.html" class="bg-[#fe7f32] px-4 py-2 text-white rounded josefin-sans">
                 Register
             </a>
+            <button>
+                <a href="../cart.html">
+                    <i class="hgi hgi-stroke hgi-shopping-basket-01 text-2xl "></i>
+                </a>
+            </button>
         </div>
     </div>
 
-    <script>
-        const menuBtn = document.getElementById("menuBtn");
-        const mobileMenu = document.getElementById("mobileMenu");
-        const closeMenu = document.getElementById("closeMenu");
-        const overlay = document.getElementById("overlay");
+    <!-- Mobile Button -->
+    <button id="menuBtn" class="md:hidden text-2xl z-[1100]">
+        ☰
+    </button>
+</nav>
 
-        // OPEN MENU
-        menuBtn.addEventListener("click", () => {
-            overlay.classList.remove("hidden");
+<!-- mobile menu start -->
+<!-- Overlay -->
+<div id="overlay" class="hidden fixed inset-0 bg-black/50 z-[900]"></div>
 
-            mobileMenu.classList.remove("hidden");
-            setTimeout(() => {
-                mobileMenu.classList.remove("translate-y-[-100%]", "opacity-0");
-                mobileMenu.classList.add("translate-y-0", "opacity-100");
-            }, 10);
-        });
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="hidden md:hidden fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md
+    shadow-lg z-[1200] -translate-y-full opacity-0 transition-all duration-300">
 
-        // CLOSE MENU
-        function closeMobileMenu() {
-            mobileMenu.classList.add("translate-y-[-100%]", "opacity-0");
-            mobileMenu.classList.remove("translate-y-0", "opacity-100");
+    <div class="flex justify-end pr-4 pt-4">
+        <button id="closeMenu" class="text-xl">✖</button>
+    </div>
 
-            overlay.classList.add("hidden");
+    <ul class="flex flex-col gap-4 px-6 py-4 text-lg font-semibold">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="booktable.html">Order</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
 
-            setTimeout(() => {
-                mobileMenu.classList.add("hidden");
-            }, 300);
-        }
-
-        closeMenu.addEventListener("click", closeMobileMenu);
-        overlay.addEventListener("click", closeMobileMenu)
-    </script>
-
-</body>
-
-</html>
+    <div class="px-6 pb-6 flex flex-col gap-2">
+        <a href="booktable.html" class="block text-center bg-[#fe7f32] px-4 py-3 text-white rounded-lg">
+            Register
+        </a>
+    </div>
+</div>
