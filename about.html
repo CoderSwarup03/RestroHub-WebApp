@@ -64,33 +64,7 @@
             <div class="absolute inset-0 bg-black/60"></div>
 
             <!-- Navbar -->
-            <nav
-                class="max-w-[95%] mx-auto flex items-center justify-between josefin-sans bg-white/90 backdrop-blur-md px-2 py-2 md:px-3 md:py-5 rounded-md shadow-md absolute top-4 left-1/2 transform -translate-x-1/2 z-50 w-[90%]">
-
-                <h4 class="text-xl md:text-3xl font-bold text-[#1b2047]">RestroHub</h4>
-
-                <!-- Desktop Menu -->
-                <div class="flex gap-4 items-center hidden md:flex">
-                    <ul class="flex gap-3 items-center text-lg font-semibold">
-                        <li><a href="./index.html" class="text-[#1b2047] hover:text-[#fe7f32]">Home</a></li>
-                        <li><a href="./about.html" class="text-[#1b2047] hover:text-[#fe7f32]">About Us</a></li>
-                        <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Menu</a></li>
-                        <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Gallary</a></li>
-                        <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Contact</a></li>
-                    </ul>
-
-                    <button class="bg-[#fe7f32] px-4 py-2 text-white rounded">
-                        <a href="./booktable.html">Book a table</a>
-                    </button>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden backdrop-blur-md">
-                    <button id="menuBtn">
-                        <i class="hgi hgi-stroke hgi-menu-restaurant text-2xl text-[#21264c]"></i>
-                    </button>
-                </div>
-            </nav>
+            <div id="navbar"></div>
 
             <!-- Mobile Menu -->
             <div id="overlay" class="hidden fixed inset-0 bg-black/50 z-[900]"></div>
@@ -114,7 +88,8 @@
 
                 <!-- Fixed Book Button -->
                 <div class="px-6 pb-6">
-                    <a href="./booktable.html" class="block text-center bg-[#fe7f32] px-4 py-3 text-white rounded-lg font-semibold">
+                    <a href="./booktable.html"
+                        class="block text-center bg-[#fe7f32] px-4 py-3 text-white rounded-lg font-semibold">
                         Book a Table
                     </a>
                 </div>
@@ -147,8 +122,7 @@
             <div class="absolute inset-0 bg-black/60"></div>
 
             <!-- Content -->
-            <div
-                class="max-w-[90%] mx-auto bg-[#fcfcfc] relative z-10 p-6 py-2 rounded-md flex flex-col gap-5">
+            <div class="max-w-[90%] mx-auto bg-[#fcfcfc] relative z-10 p-6 py-2 rounded-md flex flex-col gap-5">
                 <div class="flex flex-col gap-4 items-center justify-center mt-4 text-center">
                     <div class="w-full md:w-[35vw] flex flex-col gap-5">
                         <span class="text-sm md:text-xl font-bold uppercase ">About us</span>
@@ -344,6 +318,25 @@
 
         closeMenu.addEventListener("click", closeMobileMenu);
         overlay.addEventListener("click", closeMobileMenu);
+    </script>
+
+    <!-- navbar script -->
+    <script>
+        fetch("includes/navbar.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("navbar").innerHTML = html;
+                setActiveMenu();
+            });
+
+        function setActiveMenu() {
+            const page = location.pathname.split("/").pop().replace(".html", "") || "index";
+            document.querySelectorAll('[data-page]').forEach(link => {
+                if (link.dataset.page === page) {
+                    link.classList.add("text-[#fe7f32]");
+                }
+            });
+        }
     </script>
 </body>
 

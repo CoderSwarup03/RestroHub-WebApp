@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soya Chaap Adda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <nav class="max-w-[95%] mx-auto flex items-center justify-between
+    bg-white/90 backdrop-blur-md
+    px-2 py-2 md:px-3 md:py-5
+    rounded-md shadow-md
+    fixed top-4 left-0 right-0
+    z-[1000] w-[90%] transition-all duration-300">
+
+        <div class="flex items-center gap-1">
+            <img src="../images/logo/ss.png" class="h-[8vh] w-[15vw] md:w-[5vw] rounded-full object-cover">
+            <h4 class="hidden md:block text-xl md:text-3xl font-bold text-[#1b2047]">
+                Soya Chaap Adda
+            </h4>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex gap-4 items-center">
+            <ul class="flex gap-3 items-center text-lg font-semibold josefin-sans">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Shop</a></li>
+            </ul>
+
+            <a href="booktable.html" class="bg-[#fe7f32] px-4 py-2 text-white rounded josefin-sans">
+                Register
+            </a>
+        </div>
+
+        <!-- Mobile Button -->
+        <button id="menuBtn" class="md:hidden text-2xl z-[1100]">
+            ☰
+        </button>
+    </nav>
+
+    <!-- mobile menu -->
+    <!-- Overlay -->
+    <div id="overlay" class="hidden fixed inset-0 bg-black/50 z-[900]"></div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md
+    shadow-lg z-[999] -translate-y-full opacity-0 transition-all duration-300">
+
+        <div class="flex justify-end pr-4 pt-4">
+            <button id="closeMenu" class="text-3xl">✖</button>
+        </div>
+
+        <ul class="flex flex-col gap-4 px-6 py-4 text-lg font-semibold">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="booktable.html">Order</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="px-6 pb-6 flex flex-col gap-2">
+            <a href="booktable.html" class="block text-center bg-[#fe7f32] px-4 py-3 text-white rounded-lg">
+                Register
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const closeMenu = document.getElementById("closeMenu");
+        const overlay = document.getElementById("overlay");
+
+        menuBtn.addEventListener("click", () => {
+            overlay.classList.remove("hidden");
+            mobileMenu.classList.remove("hidden");
+
+            setTimeout(() => {
+                mobileMenu.classList.remove("-translate-y-full", "opacity-0");
+                mobileMenu.classList.add("translate-y-0", "opacity-100");
+            }, 10);
+        });
+
+        function closeMobileMenu() {
+            mobileMenu.classList.add("-translate-y-full", "opacity-0");
+            mobileMenu.classList.remove("translate-y-0", "opacity-100");
+            overlay.classList.add("hidden");
+
+            setTimeout(() => {
+                mobileMenu.classList.add("hidden");
+            }, 300);
+        }
+
+        closeMenu.addEventListener("click", closeMobileMenu);
+        overlay.addEventListener("click", closeMobileMenu);
+
+        document.querySelectorAll("#mobileMenu a").forEach(link => {
+            link.addEventListener("click", closeMobileMenu);
+        });
+    </script>
+
+</body>
+
+</html>

@@ -71,84 +71,11 @@
 <body>
     <header class="relative">
         <!-- Navbar -->
-        <nav id="navbar" class="max-w-[95%] mx-auto flex items-center justify-between
-                                josefin-sans bg-white/90 backdrop-blur-md
-                                        px-2 py-2 md:px-3 md:py-5
-                                        rounded-md shadow-md
-                                absolute top-4 left-1/2 -translate-x-1/2
-                                z-50 w-[90%] transition-all duration-300">
-
-            <div class="flex items-center gap-1">
-                <img src="./images/logo/WhatsApp-Image-2025-12-16-at-8.20.34-PM.svg"
-                    class="h-[8vh] w-[8vw] rounded-full" alt="">
-                <h4 class="text-xl md:text-3xl font-bold text-[#1b2047]">Soya Chaap Adda</h4>
-            </div>
-            <!-- Desktop Menu -->
-            <div class="flex gap-4 items-center hidden md:flex">
-                <ul class="flex gap-3 items-center text-lg font-semibold">
-                    <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Home</a></li>
-                    <li><a href="./about.html" class="text-[#1b2047] hover:text-[#fe7f32]">About Us</a></li>
-                    <li><a href="./menu.html" class="text-[#1b2047] hover:text-[#fe7f32]">Menu</a></li>
-                    <li><a href="./booktable.html" class="text-[#1b2047] hover:text-[#fe7f32]">Order</a></li>
-                    <li><a href="./contact.html" class="text-[#1b2047] hover:text-[#fe7f32]">Contact</a></li>
-                </ul>
-                <button class="bg-[#fe7f32] px-4 py-2 text-white rounded">
-                    <a href="./booktable.html">Register</a>
-                </button>
-                <button class="bg-[#fe7f32] px-4 py-2 text-white rounded">
-                    <a href="./booktable.html">Profile</a>
-                </button>
-
-                <div class="relative">
-                    <i class="hgi hgi-stroke hgi-shopping-basket-secure-01 text-2xl font-bold cursor-pointer w-[20vw]"></i>
-                    <span class="absolute bg-[#2ecc71] px-1 py-1 rounded-full right-[-6px] top-[-13px]">0</span>
-                </div>
-
-
-            </div>
-
-            <!-- Mobile Menu Button -->
-            <div class="md:hidden">
-                <button id="menuBtn">
-                    <i class="hgi hgi-stroke hgi-menu-restaurant text-2xl text-[#21264c]"></i>
-                </button>
-            </div>
-        </nav>
+        <div id="navbar"></div>
 
         <!-- Mobile Menu -->
         <!-- Overlay background -->
-        <div id="overlay" class="hidden fixed inset-0 bg-black/50 z-[900]"></div>
 
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md shadow-lg z-[999] 
-           translate-y-[-100%] opacity-0 transition-all duration-300">
-
-            <!-- Close Button -->
-            <div class="flex justify-end pr-4 pt-4">
-                <i id="closeMenu" class="hgi hgi-stroke hgi-cancel-square text-3xl text-[#21264c]"></i>
-            </div>
-
-            <!-- Menu Items -->
-            <ul class="flex flex-col gap-4 px-6 py-4 text-lg font-semibold">
-                <li><a href="#" class="text-[#1b2047] hover:text-[#fe7f32]">Home</a></li>
-                <li><a href="./about.html" class="text-[#1b2047] hover:text-[#fe7f32]">About Us</a></li>
-                <li><a href="./menu.html" class="text-[#1b2047] hover:text-[#fe7f32]">Menu</a></li>
-                <li><a href="./booktable.html" class="text-[#1b2047] hover:text-[#fe7f32]">Order</a></li>
-                <li><a href="./contact.html" class="text-[#1b2047] hover:text-[#fe7f32]">Contact</a></li>
-            </ul>
-
-            <!-- Fixed Book Button -->
-            <div class="px-6 pb-6 flex flex-col gap-2">
-                <a href="./booktable.html"
-                    class="block text-center bg-[#fe7f32] px-4 py-3 text-white rounded-lg font-semibold">
-                    Register
-                </a>
-                <a href="./booktable.html"
-                    class="block text-center bg-[#fe7f32] px-4 py-3 text-white rounded-lg font-semibold">
-                    Profile
-                </a>
-            </div>
-        </div>
 
         <!-- Slider Wrapper -->
         <div class="relative w-full h-screen overflow-hidden">
@@ -342,7 +269,8 @@
 
                     <!-- Feature 1 -->
                     <div class="border-2 border-[#c5cacc] rounded-md flex flex-col gap-3 items-center p-4 text-center">
-                        <img src="./images/partner/irctc.png" class="h-[20vh] md:h-[30vh] w-full object-cover" alt="IRCTC Authorized">
+                        <img src="./images/partner/irctc.png" class="h-[20vh] md:h-[30vh] w-full object-cover"
+                            alt="IRCTC Authorized">
                         <h4 class="text-lg md:text-3xl font-bold playfair-display">
                             IRCTC Authorized
                         </h4>
@@ -353,8 +281,8 @@
 
                     <!-- Feature 2 -->
                     <div class="border-2 border-[#c5cacc] rounded-md flex flex-col gap-3 items-center p-4 text-center">
-                        <img src="./images/partner/delivery-man-holding-brown-cardboard-box-package-smiling-face_1197144-2087.jpg" class="rounded-xl h-[25vh] md:h-[30vh] w-full object-cover"
-                            alt="Train Delivery">
+                        <img src="./images/partner/delivery-man-holding-brown-cardboard-box-package-smiling-face_1197144-2087.jpg"
+                            class="rounded-xl h-[25vh] md:h-[30vh] w-full object-cover" alt="Train Delivery">
                         <h4 class="text-lg md:text-3xl font-bold playfair-display">
                             On-Time Train Delivery
                         </h4>
@@ -365,7 +293,8 @@
 
                     <!-- Feature 3 -->
                     <div class="border-2 border-[#c5cacc] rounded-md flex flex-col gap-3 items-center p-4 text-center">
-                        <img src="./images/partner/standard-quality-control-concept-m_23-2150041862.avif" class="rounded-xl h-[25vh] md:h-[30vh] w-full object-cover" alt="Hygiene Assured">
+                        <img src="./images/partner/standard-quality-control-concept-m_23-2150041862.avif"
+                            class="rounded-xl h-[25vh] md:h-[30vh] w-full object-cover" alt="Hygiene Assured">
                         <h4 class="text-lg md:text-3xl font-bold playfair-display">
                             Hygiene Assured
                         </h4>
@@ -698,42 +627,41 @@
         showSlide(0);
 
 
-
         // navbarMenu
-        const menuBtn = document.getElementById("menuBtn");
-        const mobileMenu = document.getElementById("mobileMenu");
-        const closeMenu = document.getElementById("closeMenu");
-        const overlay = document.getElementById("overlay");
+        // const menuBtn = document.getElementById("menuBtn");
+        // const mobileMenu = document.getElementById("mobileMenu");
+        // const closeMenu = document.getElementById("closeMenu");
+        // const overlay = document.getElementById("overlay");
 
         // OPEN MENU
-        menuBtn.addEventListener("click", () => {
-            overlay.classList.remove("hidden");
+        // menuBtn.addEventListener("click", () => {
+        //     overlay.classList.remove("hidden");
 
-            mobileMenu.classList.remove("hidden");
-            setTimeout(() => {
-                mobileMenu.classList.remove("translate-y-[-100%]", "opacity-0");
-                mobileMenu.classList.add("translate-y-0", "opacity-100");
-            }, 10);
-        });
+        //     mobileMenu.classList.remove("hidden");
+        //     setTimeout(() => {
+        //         mobileMenu.classList.remove("translate-y-[-100%]", "opacity-0");
+        //         mobileMenu.classList.add("translate-y-0", "opacity-100");
+        //     }, 10);
+        // });
 
         // CLOSE MENU
-        function closeMobileMenu() {
-            mobileMenu.classList.add("translate-y-[-100%]", "opacity-0");
-            mobileMenu.classList.remove("translate-y-0", "opacity-100");
+        // function closeMobileMenu() {
+        //     mobileMenu.classList.add("translate-y-[-100%]", "opacity-0");
+        //     mobileMenu.classList.remove("translate-y-0", "opacity-100");
 
-            overlay.classList.add("hidden");
+        //     overlay.classList.add("hidden");
 
-            setTimeout(() => {
-                mobileMenu.classList.add("hidden");
-            }, 300);
-        }
+        //     setTimeout(() => {
+        //         mobileMenu.classList.add("hidden");
+        //     }, 300);
+        // }
 
-        closeMenu.addEventListener("click", closeMobileMenu);
-        overlay.addEventListener("click", closeMobileMenu);
+        // closeMenu.addEventListener("click", closeMobileMenu);
+        // overlay.addEventListener("click", closeMobileMenu);
 
     </script>
     <!-- nav fixed script -->
-    <script>
+    <!-- <script>
         const navbar = document.getElementById("navbar");
 
         window.addEventListener("scroll", () => {
@@ -759,6 +687,24 @@
                 navbar.classList.add("absolute", "top-4");
             }
         });
+    </script> -->
+    <!-- navbar script -->
+    <script>
+        fetch("includes/navbar.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("navbar").innerHTML = html;
+                setActiveMenu();
+            });
+
+        function setActiveMenu() {
+            const page = location.pathname.split("/").pop().replace(".html", "") || "index";
+            document.querySelectorAll('[data-page]').forEach(link => {
+                if (link.dataset.page === page) {
+                    link.classList.add("text-[#fe7f32]");
+                }
+            });
+        }
     </script>
 
 
