@@ -1410,85 +1410,7 @@
     </div>
 
     <!-- footer section -->
-    <footer class="relative w-full">
-
-        <!-- BACKGROUND IMAGE -->
-        <img src="./images/footer/grunge-black-concrete-textured-background_53876-124541.avif"
-            class="w-full h-full object-cover absolute inset-0" alt="footer-bg">
-
-        <!-- BLACK SHADE -->
-        <div class="absolute inset-0 bg-black/50 h-full"></div>
-
-        <!-- CONTENT -->
-        <div class="relative max-w-[85%] mx-auto pt-10">
-
-            <div class="flex justify-between items-center text-white flex-col md:flex-row gap-3">
-                <h4 class="text-3xl font-bold playfair-display text-[#c2c7c8]">RestroHub</h4>
-
-                <div class="flex items-center gap-5 text-xl md:text-2xl">
-                    <i class="hgi hgi-stroke hgi-facebook-02 hover:text-[#f39c12] cursor-pointer"></i>
-                    <i class="hgi hgi-stroke hgi-instagram hover:text-[#f39c12] cursor-pointer"></i>
-                    <i class="hgi hgi-stroke hgi-new-twitter hover:text-[#f39c12] cursor-pointer"></i>
-                    <i class="hgi hgi-stroke hgi-youtube hover:text-[#f39c12] cursor-pointer"></i>
-                </div>
-            </div>
-
-            <!-- border -->
-            <div class="border-b-4 border-dotted border-[#c5cacc] mt-3 md:mt-[8vh]"></div>
-
-
-            <div class="flex flex-col md:flex-row justify-between items-center w-full mt-3 gap-3">
-                <div class=" w-full md:w-[25%] flex flex-col items-start gap-3">
-                    <h4 class="text-lg md:text-2xl playfair-display text-[#f2f6f7] font-bold">About us</h4>
-                    <span class="text-[#798587] josefin-sans">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        Laborum
-                        beatae minima id, repellat
-                        delectus distinctio reprehenderit quibusdam dolores quos cupiditate?</span>
-                </div>
-                <div class="w-full md:w-[25%] flex flex-col items-start gap-3">
-                    <h4 class="text-lg md:text-2xl playfair-display text-[#f2f6f7] font-bold">Contact Info</h4>
-                    <div class="flex justify-between items-center w-full">
-                        <div class="flex flex-col gap-2 items-start text-[#b9c1c3] uppercase josefin-sans">
-                            <span>Call:</span>
-                            <span>Email:</span>
-                            <span>City:</span>
-                        </div>
-                        <div class="flex flex-col gap-3 items-end josefin-sans">
-                            <span class="text-[#798587]">+1234567890</span>
-                            <span class="text-[#798587]">1dIbO@example.com</span>
-                            <span class="text-[#798587]">Kolkata, India</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full md:w-[25%] flex flex-col items-start gap-3">
-                    <h4 class="text-lg md:text-2xl playfair-display text-[#f2f6f7] font-bold">Quick Links</h4>
-                    <div class="flex flex-col gap-1 josefin-sans">
-                        <span class="text-[#798587]">
-                            <a href="#">Home</a>
-                        </span>
-                        <span class="text-[#798587]">
-                            <a href="#">Menu</a>
-                        </span>
-                        <span class="text-[#798587]">
-                            <a href="#">Service</a>
-                        </span>
-                        <span class="text-[#798587]">
-                            <a href="#">Contact</a>
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="border-b-4 border-dotted border-[#c5cacc] mt-3 md:mt-[8vh]"></div>
-
-            <div class="py-5 josefin-sans text-md text-center">
-                <span class="text-[#828d90]">© RestroHub 2025. All rights reserved. Design by <span
-                        class="text-[#ed9912]"><a href="#">LogicRaft Team</a></span></span>
-            </div>
-
-        </div>
-
-    </footer>
+    <div id="footer"></div>
 
     <!-- script section -->
     <script>
@@ -1569,7 +1491,7 @@
             });
         });
     </script>
-    
+
     <script src="./includes/main.js"></script>
 
     <script>
@@ -1587,7 +1509,14 @@
             });
     </script>
 
-
+    <!-- footer script -->
+    <script>
+        fetch("./includes/footer.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("footer").innerHTML = html;
+            });
+    </script>
 </body>
 
 </html>
