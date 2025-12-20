@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restika</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* font-part */
+        .poppins-regular {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .josefin-sans {
+            font-family: "Josefin Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .playfair-display {
+            font-family: "Playfair Display", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+
+        /* Animation part */
+
+        .content-animate {
+            opacity: 0;
+            transform: translateY(65px);
+            transition: all 0.9s ease-in-out;
+        }
+
+        .content-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- navbar added here-->
+        <div id="navbar"></div>
+
+
+    </header>
+    <section id="about" class="relative">
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+            <img src="./images/background/top-view-baked-potatoes-with-cooked-vegetables-dark-desk_140725-79584.jpg"
+                class="w-full h-full object-cover" alt="">
+            <div class="absolute inset-0 bg-black/60"></div>
+        </div>
+
+        <!-- Content box -->
+        <div class="relative z-10 max-w-[90%] mx-auto py-12 md:py-20">
+            <div class="bg-[#fcfcfc] border border-green-500 rounded-md p-6 md:p-10 flex flex-col gap-10">
+
+                <!-- Resarvation Section -->
+                <div class="text-center flex flex-col items-center gap-3 mt-[10vh]">
+                    <span class="text-xl font-bold uppercase">menu cart</span>
+                    <h4 class="playfair-display text-3xl md:text-5xl font-extrabold">Checkout</h4>
+                    <span class="text-[#b9bfc0] josefin-sans">CALL US +1 777 000 111 OR COMPLETE THE FORM BELOW</span>
+                </div>
+                <div class="flex flex-col md:flex-row justify-between gap-3 mt-8 w-full">
+                    <!-- cart para -->
+                    <div class="w-full md:w-[75%] rounded-md shadow-md px-3 md:px-4 py-3">
+
+                        <div class="flex flex-col gap-2">
+                            <h4 class="text-3xl font-bold playfair-display">Contact information</h4>
+                            <span class="text-md josefin-sans">We'll use this Phone number to send you details and
+                                updates about your order.</span>
+                            <input required placeholder="Enter phone number..."
+                                class="px-3 py-3 rounded-md outline-none border-2 border-[#c5cacc] bg-[#ffffff] josefin-sans"
+                                type="number">
+                        </div>
+
+                        <div class="border-b-2 border-dotted border-[#c5cacc] mt-5"></div>
+
+                        <!-- billing address -->
+                        <div class="flex flex-col gap-2">
+                            <h4 class="text-3xl font-bold playfair-display">Billing address</h4>
+                            <span class="text-md josefin-sans">Enter the billing address that matches your payment
+                                method</span>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+
+                                <!-- Train Number -->
+                                <input type="text" placeholder="Train Number"
+                                    class="px-3 py-3 rounded-md outline-none border-2 border-[#c5cacc] bg-[#ffffff] josefin-sans" />
+
+                                <!-- PNR Number -->
+                                <input type="text" placeholder="PNR Number"
+                                    class="px-3 py-3 rounded-md outline-none border-2 border-[#c5cacc] bg-[#ffffff] josefin-sans" />
+
+                                <!-- Coach Type -->
+                                <select
+                                    class="px-3 py-3 rounded-md outline-none border-2 border-[#c5cacc] bg-[#ffffff] josefin-sans">
+                                    <option value="">Select Coach Type</option>
+                                    <option value="SL">SL (Sleeper)</option>
+                                    <option value="AC3">AC 3 Tier</option>
+                                    <option value="AC2">AC 2 Tier</option>
+                                    <option value="AC1">AC 1 Tier</option>
+                                    <option value="GN">GN (General)</option>
+                                    <option value="CC">CC (Chair Car)</option>
+                                    <option value="EC">EC (Executive Chair)</option>
+                                </select>
+
+                                <!-- Seat / Berth Number -->
+                                <input type="text" placeholder="Seat / Berth Number"
+                                    class="px-3 py-3 rounded-md outline-none border-2 border-[#c5cacc] bg-[#ffffff] josefin-sans" />
+
+                                <!-- Select Station -->
+                                <select
+                                    class="px-3 py-3 rounded-md outline-none border-2 border-[#c5cacc] bg-[#ffffff] josefin-sans">
+                                    <option value="">Select Station</option>
+                                    <option value="jhargram">Jhargram</option>
+                                    <option value="howrah">Howrah</option>
+                                    <option value="kharagpur">Kharagpur</option>
+                                </select>
+
+                                <!-- Phone Number -->
+                                <input type="tel" placeholder="Phone Number"
+                                    class="px-3 py-3 rounded-md outline-none border-2 border-[#c5cacc] bg-[#ffffff] josefin-sans" />
+
+                                <!-- Alternative Phone Number -->
+                                <input type="tel" placeholder="Alternative Phone Number"
+                                    class="px-3 py-3 rounded-md outline-none border-2 border-[#c5cacc] bg-[#ffffff] josefin-sans" />
+
+                            </div>
+
+                        </div>
+
+                        <div class="border-b-2 border-dotted border-[#c5cacc] mt-5"></div>
+
+                        <div class="flex flex-col gap-2">
+                            <h4 class="text-3xl font-bold playfair-display">Payment Method</h4>
+                            <span class="text-md josefin-sans">
+                                Enter the billing address that matches your payment method
+                            </span>
+
+                            <!-- Payment Options -->
+                            <div class="flex flex-col gap-3 mt-3">
+
+                                <!-- COD -->
+                                <label class="flex items-center gap-3 cursor-pointer">
+                                    <input type="radio" name="payment" class="accent-[#fe7f32]" checked>
+                                    <span class="josefin-sans text-lg">Cash on Delivery (COD)</span>
+                                </label>
+
+                                <!-- Online UPI -->
+                                <label class="flex items-center gap-3 cursor-pointer">
+                                    <input type="radio" name="payment" class="accent-[#fe7f32]">
+                                    <span class="josefin-sans text-lg">Online UPI Payment</span>
+                                </label>
+
+                            </div>
+                        </div>
+
+                        <div class="border-b-2 border-dotted border-[#c5cacc] mt-5"></div>
+
+                        <span class="text-md josefin-sans font-semibold mt-5">By proceeding with your purchase you agree
+                            to our Terms and Conditions and Privacy
+                            Policy</span>
+
+                        <div class="flex flex-col md:flex-row justify-between items-center gap-2 mt-4">
+                            <div>
+                                <button class="flex items-center gap-2 text-xl josefin-sans cursor-pointer
+                                    transition-all duration-300 ease-in-out
+                                  hover:-translate-x-1 hover:text-[#fe7f32]
+                                         active:scale-95">
+                                    <i
+                                        class="hgi hgi-stroke hgi-arrow-left-02 text-2xl transition-transform duration-300 group-hover:-translate-x-1"></i>
+                                    <a href="./cart.html">
+                                        Return to Cart
+                                    </a>
+                                </button>
+                            </div>
+
+                            <div>
+                                <button class="bg-[#fe7f32] px-3 py-2 rounded-md josefin-sans text-xl text-white
+                                     transition-all duration-300 ease-in-out
+                                         hover:bg-[#e86f28] hover:scale-105 hover:shadow-lg
+                                             active:scale-95">
+                                    Place Order
+                                </button>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                    <!-- Cart Total para -->
+                    <div class="w-full md:w-[35%] rounded-md shadow-md px-3 sm:px-4 py-4">
+
+                        <!-- Title -->
+                        <div class="flex items-center">
+                            <h4 class="uppercase josefin-sans font-bold text-sm sm:text-base">
+                                Cart Total
+                            </h4>
+                        </div>
+
+                        <div class="border-b-2 border-dotted border-[#c5cacc] my-4"></div>
+
+                        <!-- Discount -->
+                        <div class="flex flex-col gap-2">
+                            <span class="josefin-sans text-base sm:text-lg font-semibold">
+                                Apply discount
+                            </span>
+
+                            <div class="flex flex-col sm:flex-row gap-2">
+                                <input type="text" placeholder="Enter code"
+                                    class="w-full border-2 border-[#c5cacc] rounded-md px-3 py-2 outline-none text-sm sm:text-base josefin-sans" />
+
+                                <button
+                                    class="bg-[#f39c12] uppercase px-4 py-2 rounded-md w-full sm:w-auto text-sm font-semibold">
+                                    Apply
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="border-b-2 border-dotted border-[#c5cacc] my-4"></div>
+
+                        <!-- Total -->
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+                            <h4 class="font-bold josefin-sans text-xl sm:text-2xl">
+                                Estimated Total
+                            </h4>
+                            <span class="text-xl sm:text-2xl font-bold josefin-sans">
+                                ₹ 1,500
+                            </span>
+                        </div>
+
+                        <!-- Checkout -->
+                        <button
+                            class="bg-[#f39c12] text-sm sm:text-base font-semibold px-3 py-3 w-full rounded-md mt-5 josefin-sans uppercase">
+                            Proceed to checkout
+                        </button>
+                    </div>
+
+                </div>
+
+
+
+                <div class="border-b-4 border-dotted border-[#c5cacc]"></div>
+
+
+                <!-- contact -->
+                <div class="text-center flex flex-col items-center gap-4">
+                    <span class="text-xl font-bold uppercase">Have any question?</span>
+                    <h4 class="playfair-display text-3xl md:text-5xl font-extrabold">Contact Us</h4>
+                    <span class="text-[#b9bfc0] josefin-sans">Quaerat debitis, vel, sapiente dicta sequi labore porro
+                        pariatur harum expedita.</span>
+                </div>
+
+                <!-- contact more info -->
+                <div class="flex flex-col md:flex-row justify-between items-center gap-3 mt-8 w-full">
+                    <div
+                        class="border-2 border-[#c5cacc] rounded-md flex flex-col gap-3 items-center p-4 w-full md:w-[25%] h-auto overflow-hidden">
+                        <img src="./images/order/icon-contact-email-256x256.png" class="h-[45px] md:h-[65px]"
+                            alt="email">
+                        <h4 class="text-lg md:text-3xl font-bold playfair-display">Email</h4>
+                        <div class="flex flex-col gap-2">
+                            <span class="text-[#c5cacc] josefin-sans">info@example.com</span>
+                            <span class="text-[#c5cacc] josefin-sans">reservation@restrohub.com</span>
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="border-2 border-[#c5cacc] rounded-md flex flex-col gap-3 items-center p-4 w-full md:w-[25%] h-[28vh] md:h-[35vh]">
+                        <img src="./images/order/icon-contact-tel-256x256.png" class="h-[45px] md:h-[65px]"
+                            alt="contact">
+                        <h4 class="text-lg md:text-3xl font-bold playfair-display">Phone</h4>
+                        <div class="flex flex-col gap-2">
+                            <span class="text-[#c5cacc] josefin-sans">+1 777 000 111</span>
+                            <span class="text-[#c5cacc] josefin-sans">+91 888 000 111</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="border-2 border-[#c5cacc] rounded-md flex flex-col gap-3 items-center p-4 w-full md:w-[25%] h-[28vh] md:h-[35vh]">
+                        <img src="./images/order/icon-contact-adr-256x256.png" class="h-[45px] md:h-[65px]"
+                            alt="location">
+                        <h4 class="text-lg md:text-3xl font-bold playfair-display">Location</h4>
+                        <span class="text-[#c5cacc] josefin-sans">Kolkata, India - 700000</span>
+                    </div>
+                </div>
+
+
+                <div class="border-b-4 border-dotted border-[#c5cacc]"></div>
+
+                <!-- news latter -->
+                <div class="relative w-full  mx-auto">
+
+                    <!-- IMAGE -->
+                    <img src="./images/newslatter/food-frame-with-copy-space-flat-lay_23-2148723504.avif"
+                        class="w-full h-[50vh] md:h-[450px] object-cover rounded-md" alt="newsletter">
+
+                    <!-- BLACK SHADE -->
+                    <div class="absolute inset-0 bg-black/60 rounded-md"></div>
+
+                    <!-- TEXT ON TOP -->
+                    <div
+                        class="absolute inset-0 flex flex-col justify-center items-center text-center px-4 flex flex-col gap-3">
+                        <h4 class="text-2xl md:text-3xl font-bold josefin-sans text-white">
+                            Subscribe our newsletter
+                        </h4>
+                        <p class="text-lg josefin-sans text-gray-200 mt-2">
+                            Lorem ipsum dolor sit amet consectetur
+                        </p>
+                        <div class="flex flex-col md:flex-row items-center gap-3">
+                            <input placeholder="Email" class="outline-none px-5 py-3 rounded-md josefin-sans"
+                                type="email">
+                            <button
+                                class="bg-[#f39c12] px-3 py-3 rounded-md inline-block josefin-sans uppercase">Subscribe</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- footer added -->
+    <div id="footer"></div>
+
+    <!-- footer script -->
+    <script>
+        fetch("./includes/footer.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("footer").innerHTML = html;
+            });
+    </script>
+
+    <script src="./includes/main.js"></script>
+
+    <script>
+        fetch("./includes/navbar.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("navbar").innerHTML = html;
+
+                // ✅ SAFE CALL
+                if (typeof initMobileMenu === "function") {
+                    initMobileMenu();
+                } else {
+                    console.error("initMobileMenu not found");
+                }
+            });
+    </script>
+</body>
+
+</html>
